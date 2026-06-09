@@ -18,8 +18,8 @@ uv.lock                  # 재현 가능한 uv 잠금 파일
 ## 빠른 시작
 
 ```bash
-git clone https://github.com/foodie-repository/부동산-투자-분석-with-클로드-코드.git
-cd 부동산-투자-분석-with-클로드-코드
+git clone https://github.com/foodie-repository/real-estate-investment-analysis-with-claude-code.git
+cd real-estate-investment-analysis-with-claude-code
 
 uv sync
 cp .env.example .env
