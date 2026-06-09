@@ -84,8 +84,17 @@ Part08~10에는 탐색용 Jupyter Notebook이 포함되어 있습니다.
 
 ```text
 projects/part08_kb_dashboard/notebooks/
+  01_eda.ipynb
+  02_preprocessing.ipynb
+  03_chart_prototype.ipynb
 projects/part09_trade_map/notebooks/
+  01_eda.ipynb
+  02_preprocessing.ipynb
+  03_map_prototype.ipynb
 projects/part10_price_volume/notebooks/
+  01_eda.ipynb
+  02_preprocessing.ipynb
+  03_chart_prototype.ipynb
 ```
 
 노트북은 책의 설명을 보충하기 위한 참고 자료입니다. 데이터베이스가 없는 상태에서는 일부 셀이 실행되지 않을 수 있습니다.
