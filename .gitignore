@@ -1,0 +1,72 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Virtual Environment
+.venv/
+
+# DuckDB
+*.duckdb
+*.duckdb.wal
+
+# Data files (대용량, 로컬 전용)
+data/
+!projects/part06_tracking/data/
+!projects/part06_tracking/data/watchlist.json
+!projects/part07_roi/data/
+!projects/part07_roi/data/targets.json
+
+# Runtime logs (자동 수집 실행 산출물)
+logs/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+.omc/
+
+# Claude Code 로컬 설정
+.claude/settings.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment Variables
+.env
+.env.local
+
+# Google service account keys (예제 JSON 파일은 추적 대상이므로 키 파일명만 차단)
+service_account*.json
+*service_account*.json
+google_service_account*.json
+credentials*.json
+
+# Project Status (작업 추적용, 공유 불필요)
+status.md
+
+# 외부 참고 자료
+아파트값_5차파동/
+
+# 임시 이미지 (원고용 이미지는 별도 관리)
+docs/**/image/
+
+# Word 임시 파일
+~$*
+*.docx
+
+# Playwright MCP
+.playwright-mcp/
+
+# Presentation (강의용 슬라이드, 로컬 전용)
+presentation/
+
+# Archive (원본 원고 백업, 로컬 참고용)
+archive/
+feedback/part09_trade_map/ch03_versionA_full.html
+feedback/part09_trade_map/ch03_versionB_full.html
