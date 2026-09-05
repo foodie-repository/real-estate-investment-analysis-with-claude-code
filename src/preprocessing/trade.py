@@ -3,7 +3,7 @@
 
 매매/전월세 데이터를 분석에 적합한 형태로 가공한다.
 DuckDB SQL CTE로 구현하여 원본 데이터는 수정하지 않는다.
-Part06~09 미니 프로젝트에서 이 모듈을 import해서 사용한다.
+2부 4~8장 미니 프로젝트에서 이 모듈을 import해서 사용한다.
 
 사용법:
     from src.preprocessing.trade import preprocess

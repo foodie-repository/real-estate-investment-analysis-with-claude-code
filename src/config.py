@@ -39,7 +39,7 @@ KAKAO_API_KEY = os.getenv("KAKAO_API_KEY")
 VWORLD_API_KEY = os.getenv("VWORLD_API_KEY")
 
 # ──────────────────────────────────────────────
-# V-World 지도 타일 설정 (Part08~09 대시보드용)
+# V-World 지도 타일 설정 (2부 6~7장 대시보드용)
 # ──────────────────────────────────────────────
 def get_vworld_tiles() -> dict:
     """V-World 타일 URL 딕셔너리를 반환한다.

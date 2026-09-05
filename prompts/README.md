@@ -1,8 +1,8 @@
 # 도서 실습 프롬프트
 
-이 폴더에는 종이책 『부동산 투자 분석 with 클로드 코드』에서 독자가 클로드 코드에 직접 입력하는 실습용 프롬프트를 모았습니다. 책 본문과 AI 답변 예시는 포함하지 않습니다.
+이 폴더에는 종이책 『감을 확신으로 바꾸는 AI 부동산 투자』에서 독자가 클로드 코드에 직접 입력하는 실습용 프롬프트를 모았습니다. 책 본문과 AI 답변 예시는 포함하지 않습니다.
 
-프롬프트의 부·장·절 번호는 출판사 최종 편집본을 기준으로 합니다. 관련 예제 코드의 `Part06~10` 폴더명은 원고 개편 전 개발 경로이므로, 아래 대응표를 참고하세요.
+프롬프트와 실행 예제의 부·장·절 번호는 출판사 최종 편집본을 기준으로 합니다. `P01`과 `P02`는 각각 1부와 2부를 뜻하며, 장 번호와 절 번호는 책의 현재 목차와 같습니다.
 
 ## 사용 방법
 
@@ -14,6 +14,10 @@
 API 키가 필요한 프롬프트의 자리표시자는 자신의 키로 바꾸되, 실제 키는 반드시 로컬 `.env`에만 저장하세요. `.env`, DuckDB 파일과 서비스 계정 JSON은 GitHub에 올리지 않습니다.
 
 ## 1부. AI 부동산 투자의 준비
+
+### 1장. AI로 시작하는 데이터 기반 부동산 투자
+
+이 장은 부동산 투자와 데이터 분석의 배경을 설명하는 장으로, 독자가 직접 실행하는 별도 프롬프트는 없습니다.
 
 ### 2장. 실습 환경 구축
 
@@ -35,20 +39,44 @@ API 키가 필요한 프롬프트의 자리표시자는 자신의 키로 바꾸�
 - [P01-C03-S06 데이터 자동 수집](part01/chapter03/06_collection_automation.md)
 - [P01-C03-S07 아파트 실거래가 데이터 전처리](part01/chapter03/07_trade_preprocessing.md)
 
+## 2부. 데이터 기반 부동산 투자 분석
+
+### 4장. 관심단지 자동 트래킹
+
+- [P02-C04-S01 관심단지를 추적해야 하는 이유](part02/chapter04/01_tracking_need.md)
+- [P02-C04-S02 프롬프트 설계](part02/chapter04/02_tracking_prompt_design.md)
+- [P02-C04-S03 실행과 관심단지 관리](part02/chapter04/03_execution_and_watchlist_management.md)
+
+### 5장. 수익률 계산기
+
+- [P02-C05-S01 수익률 계산기 프롬프트](part02/chapter05/01_roi_calculator.md)
+
+### 6장. KB부동산 시각화 대시보드
+
+- [P02-C06-S01 KB부동산 대시보드 프롬프트](part02/chapter06/01_kb_dashboard.md)
+
+### 7장. 거래량 지도
+
+- [P02-C07-S01 거래량 지도 대시보드 프롬프트](part02/chapter07/01_trade_map_dashboard.md)
+
+### 8장. 가격 및 거래량 대시보드
+
+- [P02-C08-S01 가격·거래량 대시보드 프롬프트](part02/chapter08/01_price_volume_dashboard.md)
+
 ## 책 번호와 예제 코드 대응
 
 | 최종 책 위치 | 프롬프트 | 관련 코드 |
 | --- | --- | --- |
 | 1부 3장 데이터 수집과 전처리 | `prompts/part01/chapter03/` | `src/collectors/`, `src/preprocessing/` |
-| 2부 4장 관심단지 트래킹 | 추후 출판사 최종 편집본에서 추가 | `projects/part06_tracking/` |
-| 2부 5장 수익률 계산기 | 추후 출판사 최종 편집본에서 추가 | `projects/part07_roi/` |
-| 2부 6장 KB부동산 대시보드 | 추후 출판사 최종 편집본에서 추가 | `projects/part08_kb_dashboard/` |
-| 2부 7장 거래량 지도 | 추후 출판사 최종 편집본에서 추가 | `projects/part09_trade_map/` |
-| 2부 8장 가격·거래량 대시보드 | 추후 출판사 최종 편집본에서 추가 | `projects/part10_price_volume/` |
+| 2부 4장 관심단지 트래킹 | `prompts/part02/chapter04/` | `projects/part04_tracking/` |
+| 2부 5장 수익률 계산기 | `prompts/part02/chapter05/01_roi_calculator.md` | `projects/part05_roi/` |
+| 2부 6장 KB부동산 대시보드 | `prompts/part02/chapter06/01_kb_dashboard.md` | `projects/part06_kb_dashboard/` |
+| 2부 7장 거래량 지도 | `prompts/part02/chapter07/01_trade_map_dashboard.md` | `projects/part07_trade_map/` |
+| 2부 8장 가격·거래량 대시보드 | `prompts/part02/chapter08/01_price_volume_dashboard.md` | `projects/part08_price_volume/` |
 
 ## 프롬프트 표기 규칙
 
-- `P01-C03-S01`은 각각 1부(`P01`), 3장(`C03`), 3.1절(`S01`)을 뜻합니다.
+- `P02-C04-S03`은 각각 2부(`P02`), 4장(`C04`), 4.3절(`S03`)을 뜻합니다.
 - 한 파일에는 같은 절에서 이어서 사용하는 준비, 구현, 실행과 검증 프롬프트를 책의 순서대로 넣습니다.
 - 터미널 명령어, 본문 설명, AI 답변 예시와 저자·편집자 검토 메모는 제외합니다.
 - 공개 프롬프트의 내용은 출판사 최종 편집본을 기준으로 관리합니다.
