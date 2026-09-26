@@ -2,7 +2,7 @@
 
 이 폴더에는 종이책 『감을 확신으로 바꾸는 AI 부동산 투자』에서 독자가 클로드 코드에 직접 입력하는 실습용 프롬프트를 모았습니다. 책 본문과 AI 답변 예시는 포함하지 않습니다.
 
-프롬프트와 실행 예제의 부·장·절 번호는 출판사 최종 편집본을 기준으로 합니다. `P01`과 `P02`는 각각 1부와 2부를 뜻하며, 장 번호와 절 번호는 책의 현재 목차와 같습니다.
+프롬프트의 부·장·절 번호는 현재 책 목차를 기준으로 합니다. `P01`과 `P02`는 각각 1부와 2부를 뜻합니다.
 
 ## 사용 방법
 
@@ -44,7 +44,7 @@ API 키가 필요한 프롬프트의 자리표시자는 자신의 키로 바꾸�
 ### 4장. 관심단지 자동 트래킹
 
 - [P02-C04-S01 관심단지를 추적해야 하는 이유](part02/chapter04/01_tracking_need.md)
-- [P02-C04-S02 프롬프트 설계](part02/chapter04/02_tracking_prompt_design.md)
+- [P02-C04-S02 관심단지 트래킹 프롬프트](part02/chapter04/02_tracking_prompt_design.md)
 - [P02-C04-S03 실행과 관심단지 관리](part02/chapter04/03_execution_and_watchlist_management.md)
 
 ### 5장. 수익률 계산기
@@ -55,28 +55,34 @@ API 키가 필요한 프롬프트의 자리표시자는 자신의 키로 바꾸�
 
 - [P02-C06-S01 KB부동산 대시보드 프롬프트](part02/chapter06/01_kb_dashboard.md)
 
-### 7장. 거래량 지도
+### 7장. 실거래가 가격·갭 비교 대시보드
 
-- [P02-C07-S01 거래량 지도 대시보드 프롬프트](part02/chapter07/01_trade_map_dashboard.md)
+- [P02-C07-S01 실거래가 가격·갭 비교 대시보드 프롬프트](part02/chapter07/01_price_gap_dashboard.md)
 
-### 8장. 가격 및 거래량 대시보드
+### 8장. 거래량 지도 대시보드
 
-- [P02-C08-S01 가격·거래량 대시보드 프롬프트](part02/chapter08/01_price_volume_dashboard.md)
+- [P02-C08-S01 거래량 지도 대시보드 프롬프트](part02/chapter08/01_trade_map_dashboard.md)
 
-## 책 번호와 예제 코드 대응
+### 9장. 가격 및 거래량 대시보드
 
-| 최종 책 위치 | 프롬프트 | 관련 코드 |
-| --- | --- | --- |
-| 1부 3장 데이터 수집과 전처리 | `prompts/part01/chapter03/` | `src/collectors/`, `src/preprocessing/` |
-| 2부 4장 관심단지 트래킹 | `prompts/part02/chapter04/` | `projects/part04_tracking/` |
-| 2부 5장 수익률 계산기 | `prompts/part02/chapter05/01_roi_calculator.md` | `projects/part05_roi/` |
-| 2부 6장 KB부동산 대시보드 | `prompts/part02/chapter06/01_kb_dashboard.md` | `projects/part06_kb_dashboard/` |
-| 2부 7장 거래량 지도 | `prompts/part02/chapter07/01_trade_map_dashboard.md` | `projects/part07_trade_map/` |
-| 2부 8장 가격·거래량 대시보드 | `prompts/part02/chapter08/01_price_volume_dashboard.md` | `projects/part08_price_volume/` |
+- [P02-C09-S01 가격·거래량 대시보드 프롬프트](part02/chapter09/01_price_volume_dashboard.md)
+
+## 책 번호와 프롬프트 위치
+
+| 책 위치 | 프롬프트 |
+| --- | --- |
+| 1부 2장 실습 환경 구축 | `prompts/part01/chapter02/` |
+| 1부 3장 데이터 수집과 전처리 | `prompts/part01/chapter03/` |
+| 2부 4장 관심단지 자동 트래킹 | `prompts/part02/chapter04/` |
+| 2부 5장 수익률 계산기 시스템 구축 | `prompts/part02/chapter05/` |
+| 2부 6장 KB부동산 시각화 대시보드 구축 | `prompts/part02/chapter06/` |
+| 2부 7장 실거래가 가격·갭 비교 대시보드 구축 | `prompts/part02/chapter07/` |
+| 2부 8장 거래량 지도 대시보드 구축 | `prompts/part02/chapter08/` |
+| 2부 9장 가격 및 거래량 대시보드 구축 | `prompts/part02/chapter09/` |
 
 ## 프롬프트 표기 규칙
 
 - `P02-C04-S03`은 각각 2부(`P02`), 4장(`C04`), 4.3절(`S03`)을 뜻합니다.
 - 한 파일에는 같은 절에서 이어서 사용하는 준비, 구현, 실행과 검증 프롬프트를 책의 순서대로 넣습니다.
 - 터미널 명령어, 본문 설명, AI 답변 예시와 저자·편집자 검토 메모는 제외합니다.
-- 공개 프롬프트의 내용은 출판사 최종 편집본을 기준으로 관리합니다.
+- 공개 프롬프트의 내용과 번호는 책 원고와 함께 갱신합니다.
