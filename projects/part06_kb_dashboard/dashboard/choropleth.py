@@ -20,8 +20,8 @@ def _get_colormap(
     center보다 낮으면 파랑, 높으면 빨강, 같으면 흰색으로 표현한다.
 
     Args:
-        vmin: 데이터 최솟값
-        vmax: 데이터 최댓값
+        vmin: 데이터 최소값
+        vmax: 데이터 최대값
         center: 색상 중심값 (증감률은 0, 전세가율·거래량은 중앙값)
     """
     # center 기준 대칭 범위
