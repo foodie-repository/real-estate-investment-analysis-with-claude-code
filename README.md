@@ -6,6 +6,14 @@
 
 **[프롬프트 전체 목차](prompts/README.md)** · **[부록 1: 차트 검수](prompts/appendix/01_visualization_principles.md)** · **[부록 2: 후속 요청](prompts/appendix/02_practice_reference.md)**
 
+## 직접 만들고 실행할 수 있는 분석 화면
+
+[![9장 가격·거래량 대시보드: 매매·전세 가격과 월별 거래량을 함께 보는 예시 데이터 화면](assets/screenshots/chapter09-price-volume.png)](projects/chapter09_price_volume/)
+
+**가격의 변화와 거래량을 한 화면에서 확인합니다.** 7장에서 단지별 가격·갭을 비교하고, 선택한 단지를 9장으로 연결해 상세 조회할 수 있습니다. [7장 비교 대시보드](projects/chapter07_price_gap_table/) · [9장 실행 안내](projects/chapter09_price_volume/) · [6~9장 화면 더 보기](#대시보드-미리보기)
+
+> 예시 데이터로 구성한 실제 실행 화면입니다. 표시된 단지·가격·거래량·지수는 가상 검증 자료이며, 실제 시장 현황을 나타내지 않습니다.
+
 ## 처음 오셨다면
 
 | 하려는 일 | 시작할 곳 |
@@ -62,12 +70,61 @@
 
 절별 구성과 프롬프트 전문은 [도서 실습 프롬프트 목차](prompts/README.md)에서 확인할 수 있습니다.
 
+## 대시보드 미리보기
+
+보고 싶은 장을 펼쳐 화면을 확인하세요. 각 장의 실행 안내에서도 큰 이미지를 볼 수 있습니다. 모든 화면은 예시 데이터로 실행했으며, [이미지의 데이터와 촬영 기준](assets/screenshots/README.md)을 함께 제공합니다.
+
+<details>
+<summary>6장 · KB 지수의 변화 추이</summary>
+
+지역과 기간을 선택해 KB 지수의 전년 동월 대비 변화를 확인합니다.
+
+![6장 KB 지수의 변화 추이 — 예시 데이터 실행 화면](assets/screenshots/chapter06-kb-trend.png)
+
+[큰 이미지 보기](assets/screenshots/chapter06-kb-trend.png) · [6장 실행 안내](projects/chapter06_kb_dashboard/)
+
+</details>
+
+<details>
+<summary>7장 · 단지별 가격·갭 비교</summary>
+
+같은 면적·기간 조건에서 매매가격, 신규 전세가격, 갭과 거래 건수를 비교합니다.
+
+![7장 단지별 가격·갭 비교 — 예시 데이터 실행 화면](assets/screenshots/chapter07-price-gap.png)
+
+[큰 이미지 보기](assets/screenshots/chapter07-price-gap.png) · [7장 실행 안내](projects/chapter07_price_gap_table/)
+
+</details>
+
+<details>
+<summary>8장 · 거래량·회전율 순위</summary>
+
+지도 아래 순위표에서 단지별 거래량, 세대수와 회전율을 함께 확인합니다. 화면은 순위표를 발췌한 것으로, 지도 배경은 포함하지 않습니다.
+
+![8장 거래량·회전율 순위 — 예시 데이터 실행 화면](assets/screenshots/chapter08-trade-ranking.png)
+
+[큰 이미지 보기](assets/screenshots/chapter08-trade-ranking.png) · [8장 실행 안내](projects/chapter08_trade_map/)
+
+</details>
+
+<details>
+<summary>9장 · 가격·거래량 상세 분석</summary>
+
+개별 매매·전세 거래와 월별 거래량을 함께 살펴봅니다. 7장에서 선택한 단지를 연결해 상세 조회할 수도 있습니다.
+
+![9장 가격·거래량 상세 분석 — 예시 데이터 실행 화면](assets/screenshots/chapter09-price-volume.png)
+
+[큰 이미지 보기](assets/screenshots/chapter09-price-volume.png) · [9장 실행 안내](projects/chapter09_price_volume/)
+
+</details>
+
 ## 포함된 내용
 
 ```text
 prompts/                 # 현재 원고의 2~9장·부록 실습용 프롬프트
 src/                     # 공통 설정, 데이터 수집기, 전처리, 주소 유틸리티
 projects/                # 4~9장 참고용 완성 사례와 이전 실행 경로의 연결 파일
+assets/screenshots/      # README에 표시하는 대시보드 실행 화면
 tests/                   # 주요 단위 테스트와 통합 테스트
 pyproject.toml           # Python 의존성
 uv.lock                  # 재현 가능한 uv 잠금 파일
