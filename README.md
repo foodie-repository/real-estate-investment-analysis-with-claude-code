@@ -10,7 +10,7 @@
 
 [![9장 가격·거래량 대시보드: 매매·전세 가격과 월별 거래량을 함께 보는 실제 데이터 화면](assets/screenshots/chapter09-price-volume-manuscript-d68e488d.png)](projects/chapter09_price_volume/)
 
-**가격의 변화와 거래량을 한 화면에서 확인합니다.** 7장에서 단지별 가격·갭을 비교하고, 선택한 단지를 9장으로 연결해 상세 조회할 수 있습니다. [7장 비교 대시보드](projects/chapter07_price_gap_table/) · [9장 실행 안내](projects/chapter09_price_volume/) · [6~9장 화면 더 보기](#대시보드-미리보기)
+**가격의 변화와 거래량을 한 화면에서 확인합니다.** 7장에서 단지별 가격·갭을 비교하고, 선택한 단지를 9장으로 연결해 상세 조회할 수 있습니다. [7장 비교 대시보드](projects/chapter07_price_gap_table/) · [9장 실행 안내](projects/chapter09_price_volume/) · [4~9장 결과 화면 보기](#장별-프롬프트와-참고-코드)
 
 > 책 원고에 수록된 실제 데이터 실행 화면입니다. 장마다 조회 지역·기간이 다르며, 현재 시점의 시장 현황을 나타내는 실시간 화면은 아닙니다. [화면별 조회 조건과 출처](assets/screenshots/README.md)를 확인하세요.
 
@@ -54,14 +54,14 @@
 
 ### 2부. 관심단지와 지역을 데이터로 분석하는 도구 만들기
 
-| 장 | 제목 | 프롬프트 | 참고용 완성 코드 |
-| --- | --- | --- | --- |
-| 4장 | 관심단지 실거래가를 자동으로 추적하는 시트 만들기 | [프롬프트](prompts/part02/chapter04/) | [프로젝트](projects/chapter04_tracking/) |
-| 5장 | 매수 시점별 아파트 수익률 계산기 만들기 | [프롬프트](prompts/part02/chapter05/) | [프로젝트](projects/chapter05_roi/) |
-| 6장 | KB부동산 지수로 시장 흐름을 읽는 지도 대시보드 만들기 | [프롬프트](prompts/part02/chapter06/) | [프로젝트](projects/chapter06_kb_dashboard/) |
-| 7장 | 실거래가로 단지별 가격·갭을 비교하는 대시보드 만들기 | [프롬프트](prompts/part02/chapter07/) | [프로젝트](projects/chapter07_price_gap_table/) |
-| 8장 | 거래량 지도로 지역 대장 단지를 찾는 대시보드 만들기 | [프롬프트](prompts/part02/chapter08/) | [프로젝트](projects/chapter08_trade_map/) |
-| 9장 | 단지 가격·거래량 대시보드와 AI 투자 분석 보고서 만들기 | [프롬프트](prompts/part02/chapter09/) | [프로젝트](projects/chapter09_price_volume/) |
+| 장 | 제목 | 프롬프트 | 참고용 완성 코드 | 결과 화면 |
+| --- | --- | --- | --- | --- |
+| 4장 | 관심단지 실거래가를 자동으로 추적하는 시트 만들기 | [프롬프트](prompts/part02/chapter04/) | [프로젝트](projects/chapter04_tracking/) | [관심단지 시트 보기](assets/screenshots/chapter04-tracking-sheet-manuscript-e1a0884d.png) |
+| 5장 | 매수 시점별 아파트 수익률 계산기 만들기 | [프롬프트](prompts/part02/chapter05/) | [프로젝트](projects/chapter05_roi/) | [수익률 비교표 보기](assets/screenshots/chapter05-roi-sheet-manuscript-5bbb7105.png) |
+| 6장 | KB부동산 지수로 시장 흐름을 읽는 지도 대시보드 만들기 | [프롬프트](prompts/part02/chapter06/) | [프로젝트](projects/chapter06_kb_dashboard/) | [KB 지도 보기](assets/screenshots/chapter06-kb-dashboard-manuscript-7ee1f591.png) |
+| 7장 | 실거래가로 단지별 가격·갭을 비교하는 대시보드 만들기 | [프롬프트](prompts/part02/chapter07/) | [프로젝트](projects/chapter07_price_gap_table/) | [가격·갭 비교표 보기](assets/screenshots/chapter07-price-gap-manuscript-c0edde9e.png) |
+| 8장 | 거래량 지도로 지역 대장 단지를 찾는 대시보드 만들기 | [프롬프트](prompts/part02/chapter08/) | [프로젝트](projects/chapter08_trade_map/) | [거래량 지도 보기](assets/screenshots/chapter08-trade-map-manuscript-7640f4ce.png) |
+| 9장 | 단지 가격·거래량 대시보드와 AI 투자 분석 보고서 만들기 | [프롬프트](prompts/part02/chapter09/) | [프로젝트](projects/chapter09_price_volume/) | [가격·거래량 보기](assets/screenshots/chapter09-price-volume-manuscript-d68e488d.png) |
 
 ### 부록
 
@@ -70,61 +70,13 @@
 
 절별 구성과 프롬프트 전문은 [도서 실습 프롬프트 목차](prompts/README.md)에서 확인할 수 있습니다.
 
-## 대시보드 미리보기
-
-보고 싶은 장을 펼쳐 화면을 확인하세요. 각 장의 실행 안내에서도 큰 이미지를 볼 수 있습니다. 이미지는 책 원고의 실제 데이터 화면이며, [화면별 조회 조건과 출처](assets/screenshots/README.md)를 함께 제공합니다.
-
-<details>
-<summary>6장 · KB 지수와 거래량 지도</summary>
-
-서울의 2026년 4월 매매·전세 지수 증감률, 전세가율과 매매 거래량을 네 지도로 비교합니다.
-
-![6장 KB 지수와 거래량 지도 — 원고에 수록된 실제 데이터 실행 화면](assets/screenshots/chapter06-kb-dashboard-manuscript-7ee1f591.png)
-
-[큰 이미지 보기](assets/screenshots/chapter06-kb-dashboard-manuscript-7ee1f591.png) · [6장 실행 안내](projects/chapter06_kb_dashboard/)
-
-</details>
-
-<details>
-<summary>7장 · 단지별 가격·갭 비교</summary>
-
-서울·경기·인천의 2026년 6~8월, 30평대 단지를 대상으로 매매가격, 신규 전세가격, 갭과 거래 건수를 비교합니다.
-
-![7장 단지별 가격·갭 비교 — 원고에 수록된 실제 데이터 실행 화면](assets/screenshots/chapter07-price-gap-manuscript-c0edde9e.png)
-
-[큰 이미지 보기](assets/screenshots/chapter07-price-gap-manuscript-c0edde9e.png) · [7장 실행 안내](projects/chapter07_price_gap_table/)
-
-</details>
-
-<details>
-<summary>8장 · 거래량 랭킹 지도</summary>
-
-서울 강남구의 2025년 매매 거래량 상위 50개 단지를 지도에서 살펴봅니다. V-World 배경지도 위에 순위·연식별 마커가 표시되며, 아래 표에서 거래량·세대수·회전율을 함께 확인합니다.
-
-![8장 거래량 랭킹 지도 — 원고에 수록된 실제 데이터 실행 화면](assets/screenshots/chapter08-trade-map-manuscript-7640f4ce.png)
-
-[큰 이미지 보기](assets/screenshots/chapter08-trade-map-manuscript-7640f4ce.png) · [8장 실행 안내](projects/chapter08_trade_map/)
-
-</details>
-
-<details>
-<summary>9장 · 가격·거래량 상세 분석</summary>
-
-7장에서 선택한 송도동 두 단지의 30평대를 연결해 월별 매매·전세 중위가와 거래량을 비교합니다. 화면의 조회 기간은 2019~2026년입니다.
-
-![9장 가격·거래량 상세 분석 — 원고에 수록된 실제 데이터 실행 화면](assets/screenshots/chapter09-price-volume-manuscript-d68e488d.png)
-
-[큰 이미지 보기](assets/screenshots/chapter09-price-volume-manuscript-d68e488d.png) · [9장 실행 안내](projects/chapter09_price_volume/)
-
-</details>
-
 ## 포함된 내용
 
 ```text
 prompts/                 # 현재 원고의 2~9장·부록 실습용 프롬프트
 src/                     # 공통 설정, 데이터 수집기, 전처리, 주소 유틸리티
 projects/                # 4~9장 참고용 완성 사례와 이전 실행 경로의 연결 파일
-assets/screenshots/      # README에 표시하는 대시보드 실행 화면
+assets/screenshots/      # README에서 연결하는 시트·대시보드 결과 화면
 tests/                   # 주요 단위 테스트와 통합 테스트
 pyproject.toml           # Python 의존성
 uv.lock                  # 재현 가능한 uv 잠금 파일
