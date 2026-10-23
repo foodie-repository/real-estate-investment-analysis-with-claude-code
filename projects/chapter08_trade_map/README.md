@@ -4,11 +4,11 @@
 
 ## 실행 화면
 
-![8장 거래량 랭킹 지도 — 원고에 수록된 실제 데이터 실행 화면](../../assets/screenshots/chapter08-trade-map.png)
+![8장 거래량 랭킹 지도 — 원고에 수록된 실제 데이터 실행 화면](../../assets/screenshots/chapter08-trade-map-manuscript-7640f4ce.png)
 
 서울 강남구의 2025년 매매 거래량 상위 50개 단지를 지도에서 살펴봅니다. V-World 배경지도 위에 순위·연식별 마커가 표시되며, 아래 표에서 거래량·세대수·회전율을 함께 확인합니다.
 
-> 책 원고에 수록된 실제 데이터 실행 화면입니다. 캡처 당시의 조회 조건을 보여주며, 현재 시점의 시장 현황과는 다를 수 있습니다. [큰 이미지 보기](../../assets/screenshots/chapter08-trade-map.png) · [조회 조건과 출처](../../assets/screenshots/README.md)
+> 책 원고에 수록된 실제 데이터 실행 화면입니다. 캡처 당시의 조회 조건을 보여주며, 현재 시점의 시장 현황과는 다를 수 있습니다. [큰 이미지 보기](../../assets/screenshots/chapter08-trade-map-manuscript-7640f4ce.png) · [조회 조건과 출처](../../assets/screenshots/README.md)
 
 ## 필요한 자료와 계산 기준
 

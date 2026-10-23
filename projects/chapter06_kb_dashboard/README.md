@@ -4,11 +4,11 @@
 
 ## 실행 화면
 
-![6장 KB 지수와 거래량 지도 — 원고에 수록된 실제 데이터 실행 화면](../../assets/screenshots/chapter06-kb-dashboard.png)
+![6장 KB 지수와 거래량 지도 — 원고에 수록된 실제 데이터 실행 화면](../../assets/screenshots/chapter06-kb-dashboard-manuscript-7ee1f591.png)
 
 서울의 2026년 4월 매매·전세 지수 증감률, 전세가율과 매매 거래량을 네 지도로 비교합니다.
 
-> 책 원고에 수록된 실제 데이터 실행 화면입니다. 캡처 당시의 조회 조건을 보여주며, 현재 시점의 시장 현황과는 다를 수 있습니다. [큰 이미지 보기](../../assets/screenshots/chapter06-kb-dashboard.png) · [조회 조건과 출처](../../assets/screenshots/README.md)
+> 책 원고에 수록된 실제 데이터 실행 화면입니다. 캡처 당시의 조회 조건을 보여주며, 현재 시점의 시장 현황과는 다를 수 있습니다. [큰 이미지 보기](../../assets/screenshots/chapter06-kb-dashboard-manuscript-7ee1f591.png) · [조회 조건과 출처](../../assets/screenshots/README.md)
 
 ## 필요한 자료와 계산 기준
 

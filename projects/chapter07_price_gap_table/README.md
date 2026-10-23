@@ -4,11 +4,11 @@
 
 ## 실행 화면
 
-![7장 단지별 가격·갭 비교 — 원고에 수록된 실제 데이터 실행 화면](../../assets/screenshots/chapter07-price-gap.png)
+![7장 단지별 가격·갭 비교 — 원고에 수록된 실제 데이터 실행 화면](../../assets/screenshots/chapter07-price-gap-manuscript-c0edde9e.png)
 
 서울·경기·인천의 2026년 6~8월, 30평대 단지를 대상으로 매매가격, 신규 전세가격, 갭과 거래 건수를 비교합니다.
 
-> 책 원고에 수록된 실제 데이터 실행 화면입니다. 캡처 당시의 조회 조건을 보여주며, 현재 시점의 시장 현황과는 다를 수 있습니다. [큰 이미지 보기](../../assets/screenshots/chapter07-price-gap.png) · [조회 조건과 출처](../../assets/screenshots/README.md)
+> 책 원고에 수록된 실제 데이터 실행 화면입니다. 캡처 당시의 조회 조건을 보여주며, 현재 시점의 시장 현황과는 다를 수 있습니다. [큰 이미지 보기](../../assets/screenshots/chapter07-price-gap-manuscript-c0edde9e.png) · [조회 조건과 출처](../../assets/screenshots/README.md)
 
 ## 필요한 자료와 계산 기준
 
