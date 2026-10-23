@@ -1,42 +1,35 @@
-# 실행 예제 프로젝트
+# 장별 실행 프로젝트
 
-이 폴더에는 『감을 확신으로 바꾸는 AI 부동산 투자』 2부에서 만든 실행 예제가 들어 있습니다. 현재 4·5·6·8·9장에 대응하는 참고 코드이며, 기존 폴더명을 유지합니다. 현재 원고의 프롬프트와 코드가 모두 동기화된 것은 아닙니다. 실습 프롬프트는 [프롬프트 목차](../prompts/README.md)를 기준으로 사용하세요.
+현재 책의 4~9장에 대응하는 참고 코드입니다. [전체 프롬프트](../prompts/README.md)와 함께 사용하고, 설치·데이터 준비는 [저장소 안내](../README.md)를 따르세요.
 
-## 프로젝트 목록
+| 장 | 도구 | 실행 안내 |
+| --- | --- | --- |
+| 4장 | 관심단지 시세 트래킹 | [chapter04_tracking](chapter04_tracking/README.md) |
+| 5장 | 매수 시점별 수익률 계산 | [chapter05_roi](chapter05_roi/README.md) |
+| 6장 | KB부동산 대시보드 | [chapter06_kb_dashboard](chapter06_kb_dashboard/README.md) |
+| 7장 | 가격·갭 비교 대시보드 | [chapter07_price_gap_table](chapter07_price_gap_table/README.md) |
+| 8장 | 거래량·회전율 지도 | [chapter08_trade_map](chapter08_trade_map/README.md) |
+| 9장 | 가격·거래량 대시보드 | [chapter09_price_volume](chapter09_price_volume/README.md) |
 
-| 책의 위치 | 프로젝트 | 결과물 | 실행 안내 |
-| --- | --- | --- | --- |
-| 2부 4장. 관심단지 자동 트래킹 | [`part04_tracking/`](part04_tracking/) | 관심단지별 최신 매매·전세 정보와 투자 지표 | [`README.md`](part04_tracking/README.md) |
-| 2부 5장. 수익률 계산기 | [`part05_roi/`](part05_roi/) | 매수 시점과 보유 기간별 수익률 비교 | [`README.md`](part05_roi/README.md) |
-| 2부 6장. KB부동산 시각화 대시보드 | [`part06_kb_dashboard/`](part06_kb_dashboard/) | KB 지표와 지역별 변화를 보여주는 Streamlit 대시보드 | [`README.md`](part06_kb_dashboard/README.md) |
-| 2부 8장. 거래량 지도 | [`part07_trade_map/`](part07_trade_map/) | 단지별 거래량과 회전율 순위 지도 | [`README.md`](part07_trade_map/README.md) |
-| 2부 9장. 가격 및 거래량 대시보드 | [`part08_price_volume/`](part08_price_volume/) | 개별 거래와 월별 가격·거래량 비교 대시보드 | [`README.md`](part08_price_volume/README.md) |
+## 기존 경로에서 업데이트하는 경우
 
-현재 7장의 가격·갭 비교 대시보드는 [구현 프롬프트](../prompts/part02/chapter07/01_price_gap_dashboard.md)를 제공합니다. 별도의 완성 코드 폴더는 아직 포함하지 않습니다.
+실행 코드의 기준 경로는 현재 장 번호와 같은 `chapterXX`입니다. 이전 `partXX` 명령은 연결용 실행 파일을 통해 현재 코드로 이동합니다. 내부 모듈을 직접 import한 개인 코드는 새 경로로 변경하세요.
 
-## 공통 준비
+| 이전 경로 | 현재 경로 |
+| --- | --- |
+| `part04_tracking` | [chapter04_tracking](chapter04_tracking/) |
+| `part05_roi` | [chapter05_roi](chapter05_roi/) |
+| `part06_kb_dashboard` | [chapter06_kb_dashboard](chapter06_kb_dashboard/) |
+| `part07_trade_map` | [chapter08_trade_map](chapter08_trade_map/) |
+| `part08_price_volume` | [chapter09_price_volume](chapter09_price_volume/) |
 
-저장소 루트의 [참고 코드 실행 준비와 환경변수 안내](../README.md)를 따라 의존성, `.env`와 필요한 데이터를 준비합니다. API 키·서비스 계정 JSON·DuckDB 파일은 GitHub에 올리지 않습니다.
+기존 관심단지·분석 대상 JSON을 수정했다면 먼저 백업한 뒤 현재 장 폴더의 `data/`로 옮깁니다. 기존 폴더의 목록을 자동으로 덮어쓰거나 읽지 않습니다.
 
-## 실행 순서
+## 데이터 준비 순서
 
-참고 코드를 실행할 때는 필요한 자료부터 준비합니다.
+1. 매매·전월세와 필요한 KB 통계를 수집합니다.
+2. 공동주택 기본정보, 주소별 좌표와 시군구 경계지도를 준비합니다.
+3. DB의 실제 지역·기간과 단지·면적을 확인합니다.
+4. 해당 장의 코드를 실행하고 필터·계산 결과를 확인합니다.
 
-1. 3장에서 필요한 실거래가·KB부동산·공동주택·좌표 데이터와 시군구 경계지도를 수집합니다.
-2. 2부 4장에서 관심단지를 등록하고 최신 거래 정보를 확인합니다.
-3. 2부 5장에서 분석할 단지를 등록하고 매수 시점별 수익률을 비교합니다.
-4. 현재 6·8·9장에 대응하는 대시보드를 실행합니다. 실행할 기능에 필요한 지역·기간의 자료가 있는지 먼저 확인합니다.
-
-데이터 수집 명령은 저장소 루트의 [README.md](../README.md)를 참고하세요. 데이터베이스에 필요한 기간과 지역의 자료가 없으면 프로젝트가 실행되더라도 결과가 비어 있을 수 있습니다.
-
-## 관련 자료
-
-- [도서 실습 프롬프트](../prompts/README.md)
-- [2부 4장 프롬프트](../prompts/part02/chapter04/)
-- [2부 5장 프롬프트](../prompts/part02/chapter05/)
-- [2부 6장 프롬프트](../prompts/part02/chapter06/)
-- [2부 7장 프롬프트](../prompts/part02/chapter07/)
-- [2부 8장 프롬프트](../prompts/part02/chapter08/)
-- [2부 9장 프롬프트](../prompts/part02/chapter09/)
-
-각 프로젝트 README에는 해당 프로젝트의 파일 구조와 실행 조건을 더 자세히 설명합니다.
+데이터가 없는 새 설치에서도 테스트용 합성 자료로 계산 로직을 검증할 수 있습니다. 검증 범위와 제한은 [검증 기록](../VALIDATION.md)을 참고하세요.

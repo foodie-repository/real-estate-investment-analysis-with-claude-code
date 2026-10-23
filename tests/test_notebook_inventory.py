@@ -5,35 +5,35 @@ from pathlib import Path
 PROJECTS = Path("projects")
 
 
-def _notebook_names(part_path: str) -> list[str]:
-    return sorted(path.name for path in (PROJECTS / part_path / "notebooks").glob("*.ipynb"))
+def _notebook_names(chapter_path: str) -> list[str]:
+    return sorted(path.name for path in (PROJECTS / chapter_path / "notebooks").glob("*.ipynb"))
 
 
-def test_part06_to_part08_notebook_inventory():
+def test_chapter06_to_chapter09_notebook_inventory():
     expected = {
-        "part06_kb_dashboard": [
+        "chapter06_kb_dashboard": [
             "01_eda.ipynb",
             "02_preprocessing.ipynb",
             "03_chart_prototype.ipynb",
         ],
-        "part07_trade_map": [
+        "chapter08_trade_map": [
             "01_eda.ipynb",
             "02_preprocessing.ipynb",
             "03_map_prototype.ipynb",
         ],
-        "part08_price_volume": [
+        "chapter09_price_volume": [
             "01_eda.ipynb",
             "02_preprocessing.ipynb",
             "03_chart_prototype.ipynb",
         ],
     }
 
-    for part_path, notebook_names in expected.items():
-        assert _notebook_names(part_path) == notebook_names
+    for chapter_path, notebook_names in expected.items():
+        assert _notebook_names(chapter_path) == notebook_names
 
 
-def test_part06_visualization_notebook_is_valid_json():
-    path = PROJECTS / "part06_kb_dashboard" / "notebooks" / "03_chart_prototype.ipynb"
+def test_chapter06_visualization_notebook_is_valid_json():
+    path = PROJECTS / "chapter06_kb_dashboard" / "notebooks" / "03_chart_prototype.ipynb"
     notebook = json.loads(path.read_text(encoding="utf-8"))
 
     assert notebook["nbformat"] == 4

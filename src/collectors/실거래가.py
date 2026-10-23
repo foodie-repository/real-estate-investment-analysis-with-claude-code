@@ -12,6 +12,7 @@ DuckDB에 저장한다.
 
 import argparse
 import sys
+from pathlib import Path
 import duckdb
 import pandas as pd
 from PublicDataReader import TransactionPrice, code_bdong
@@ -239,36 +240,36 @@ def collect_전월세(api, sigungu_codes, year):
 # ──────────────────────────────────────────────
 # DuckDB 저장
 # ──────────────────────────────────────────────
-def save_to_duckdb(df, table_name, year):
-    """
-    DuckDB에 저장한다.
-    같은 연도 데이터가 있으면 삭제 후 재저장 (중복 방지).
-    """
+def save_to_duckdb(df, table_name, year, sido=None):
+    """요청한 연도·시도만 원자적으로 교체한다. 빈 결과는 기존 자료를 보존한다."""
+    if table_name not in {"매매", "전월세"}:
+        raise ValueError("지원하지 않는 거래 테이블입니다.")
+    if df.empty:
+        return 0
+    if not df["계약년월"].between(year * 100 + 1, year * 100 + 12).all():
+        raise ValueError("수집 연도 밖의 거래가 포함되어 있습니다.")
+    if sido and not df["시군구"].str.startswith(sido + " ").all():
+        raise ValueError("수집 시도 밖의 거래가 포함되어 있습니다.")
+    Path(DB_PATH).parent.mkdir(parents=True, exist_ok=True)
     con = duckdb.connect(DB_PATH)
-
-    # 테이블 존재 여부 확인
-    tables = [
-        t[0]
-        for t in con.execute(
-            "SELECT table_name FROM information_schema.tables"
-        ).fetchall()
-    ]
-
-    if table_name in tables:
-        # 해당 연도 데이터 삭제
-        con.execute(
-            f'DELETE FROM "{table_name}" '
-            f"WHERE 계약년월 >= {year}01 AND 계약년월 <= {year}12"
-        )
-        # 새 데이터 추가
-        con.execute(f'INSERT INTO "{table_name}" SELECT * FROM df')
-    else:
-        # 테이블 새로 생성
-        con.execute(f'CREATE TABLE "{table_name}" AS SELECT * FROM df')
-
-    total = con.execute(f'SELECT COUNT(*) FROM "{table_name}"').fetchone()[0]
-    con.close()
-    return total
+    try:
+        con.execute("BEGIN")
+        exists = con.execute("SELECT 1 FROM information_schema.tables WHERE table_name = ?", [table_name]).fetchone()
+        if exists:
+            region = "AND starts_with(시군구, ?)" if sido else ""
+            params = [year * 100 + 1, year * 100 + 12] + ([sido + " "] if sido else [])
+            con.execute(f'DELETE FROM "{table_name}" WHERE 계약년월 BETWEEN ? AND ? {region}', params)
+            con.execute(f'INSERT INTO "{table_name}" BY NAME SELECT * FROM df')
+        else:
+            con.execute(f'CREATE TABLE "{table_name}" AS SELECT * FROM df')
+        total = con.execute(f'SELECT COUNT(*) FROM "{table_name}"').fetchone()[0]
+        con.execute("COMMIT")
+        return total
+    except Exception:
+        con.execute("ROLLBACK")
+        raise
+    finally:
+        con.close()
 
 
 # ──────────────────────────────────────────────
@@ -317,8 +318,11 @@ def main():
         else:
             df, errors = collect_전월세(api, sigungu_codes, args.year)
 
-        if len(df) > 0:
-            total = save_to_duckdb(df, trade_type, args.year)
+        if errors:
+            results[trade_type] = {"수집": len(df), "전체": 0, "오류": len(errors)}
+            print("일부 지역 수집 실패: 기존 데이터를 보존하고 저장하지 않습니다.")
+        elif len(df) > 0:
+            total = save_to_duckdb(df, trade_type, args.year, args.sido)
             results[trade_type] = {"수집": len(df), "전체": total, "오류": len(errors)}
             print(f"\n  저장 완료: {len(df):,}건 (테이블 전체: {total:,}건)")
         else:
@@ -335,6 +339,8 @@ def main():
     for name, info in results.items():
         print(f"  {name}: {info['수집']:,}건 수집, {info['오류']}건 오류")
     print("=" * 60)
+    if any(info["오류"] for info in results.values()):
+        raise SystemExit(1)
 
 
 if __name__ == "__main__":

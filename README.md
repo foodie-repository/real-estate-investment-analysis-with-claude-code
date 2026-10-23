@@ -28,9 +28,9 @@
 
 2026-10-24 기준으로 1장부터 부록 2까지 프롬프트를 대조했습니다. 2~9장과 부록의 요청 **211개를 25개 파일**에 담았으며, 1장은 독립된 실습 프롬프트가 없습니다.
 
-프롬프트는 현재 원고를 기준으로 갱신했습니다. 참고용 완성 코드는 이전 `partXX` 경로를 유지하며, 이번 프롬프트 갱신에 맞춰 코드를 모두 수정하거나 모든 요청을 다시 실행한 것은 아닙니다. 책을 따라 만든 결과물은 파일명이나 코드 구조보다 요청한 기능과 검증 결과를 기준으로 확인하세요.
+프롬프트는 현재 원고를 기준으로 갱신했습니다. 참고 코드는 현재 장 번호와 같은 `chapter04`~`chapter09` 경로로 갱신했습니다. 기존 `partXX` 실행 명령은 연결용 진입점으로 유지합니다. 모든 프롬프트를 각각 AI에 다시 실행한 것은 아니며, 코드의 검증 범위는 [검증 기록](VALIDATION.md)에 명시합니다. 책을 따라 만든 결과물은 파일명이나 코드 구조보다 요청한 기능과 검증 결과를 기준으로 확인하세요.
 
-현재 7장의 가격·갭 비교 대시보드는 프롬프트를 제공합니다. 별도의 완성 코드 폴더는 아직 포함하지 않습니다. 현재 8장 거래량 지도는 `projects/part07_trade_map/`, 9장 가격·거래량 대시보드는 `projects/part08_price_volume/`에 대응합니다.
+7장의 가격·갭 비교 코드와 7→9장 선택 조건 연결을 포함합니다. 기존 폴더에서 직접 수정한 목록이나 코드를 사용하는 경우 [경로 이전 안내](projects/README.md)를 먼저 확인하세요.
 
 ## 장별 프롬프트와 참고 코드
 
@@ -48,12 +48,12 @@
 
 | 장 | 제목 | 프롬프트 | 참고용 완성 코드 |
 | --- | --- | --- | --- |
-| 4장 | 관심단지 실거래가를 자동으로 추적하는 시트 만들기 | [프롬프트](prompts/part02/chapter04/) | [프로젝트](projects/part04_tracking/) |
-| 5장 | 매수 시점별 아파트 수익률 계산기 만들기 | [프롬프트](prompts/part02/chapter05/) | [프로젝트](projects/part05_roi/) |
-| 6장 | KB부동산 지수로 시장 흐름을 읽는 지도 대시보드 만들기 | [프롬프트](prompts/part02/chapter06/) | [프로젝트](projects/part06_kb_dashboard/) |
-| 7장 | 실거래가로 단지별 가격·갭을 비교하는 대시보드 만들기 | [프롬프트](prompts/part02/chapter07/) | 프롬프트로 구현 |
-| 8장 | 거래량 지도로 지역 대장 단지를 찾는 대시보드 만들기 | [프롬프트](prompts/part02/chapter08/) | [프로젝트](projects/part07_trade_map/) |
-| 9장 | 단지 가격·거래량 대시보드와 AI 투자 분석 보고서 만들기 | [프롬프트](prompts/part02/chapter09/) | [프로젝트](projects/part08_price_volume/) |
+| 4장 | 관심단지 실거래가를 자동으로 추적하는 시트 만들기 | [프롬프트](prompts/part02/chapter04/) | [프로젝트](projects/chapter04_tracking/) |
+| 5장 | 매수 시점별 아파트 수익률 계산기 만들기 | [프롬프트](prompts/part02/chapter05/) | [프로젝트](projects/chapter05_roi/) |
+| 6장 | KB부동산 지수로 시장 흐름을 읽는 지도 대시보드 만들기 | [프롬프트](prompts/part02/chapter06/) | [프로젝트](projects/chapter06_kb_dashboard/) |
+| 7장 | 실거래가로 단지별 가격·갭을 비교하는 대시보드 만들기 | [프롬프트](prompts/part02/chapter07/) | [프로젝트](projects/chapter07_price_gap_table/) |
+| 8장 | 거래량 지도로 지역 대장 단지를 찾는 대시보드 만들기 | [프롬프트](prompts/part02/chapter08/) | [프로젝트](projects/chapter08_trade_map/) |
+| 9장 | 단지 가격·거래량 대시보드와 AI 투자 분석 보고서 만들기 | [프롬프트](prompts/part02/chapter09/) | [프로젝트](projects/chapter09_price_volume/) |
 
 ### 부록
 
@@ -67,7 +67,7 @@
 ```text
 prompts/                 # 현재 원고의 2~9장·부록 실습용 프롬프트
 src/                     # 공통 설정, 데이터 수집기, 전처리, 주소 유틸리티
-projects/                # 기존 경로를 유지한 참고용 완성 사례
+projects/                # 4~9장 참고용 완성 사례와 이전 실행 경로의 연결 파일
 tests/                   # 주요 단위 테스트와 통합 테스트
 pyproject.toml           # Python 의존성
 uv.lock                  # 재현 가능한 uv 잠금 파일
@@ -76,7 +76,7 @@ uv.lock                  # 재현 가능한 uv 잠금 파일
 
 ### 예시 입력 자료
 
-`projects/part04_tracking/data/watchlist.json`과 `projects/part05_roi/data/targets.json`은 실습 흐름을 확인하기 위한 예시 단지 목록입니다. 개인의 실제 관심 단지나 투자 계획을 공개한 자료가 아니며, 책을 따라 실습할 때 자신의 조건에 맞게 바꿔 사용하세요.
+`projects/chapter04_tracking/data/watchlist.json`과 `projects/chapter05_roi/data/targets.json`은 실습 흐름을 확인하기 위한 예시 단지 목록입니다. 개인의 실제 관심 단지나 투자 계획을 공개한 자료가 아니며, 책을 따라 실습할 때 자신의 조건에 맞게 바꿔 사용하세요.
 
 ## 참고 코드 실행 준비
 
@@ -118,13 +118,14 @@ uv run python -m src.collectors.좌표
 uv run python -m src.collectors.경계지도
 
 # 2부 4~5장 콘솔 또는 Google Sheets 출력
-uv run python -m projects.part04_tracking.main
-uv run python -m projects.part05_roi.main
+uv run python -m projects.chapter04_tracking.main
+uv run python -m projects.chapter05_roi.main
 
-# 현재 6·8·9장의 참고용 Streamlit 대시보드
-uv run streamlit run projects/part06_kb_dashboard/dashboard/app.py
-uv run streamlit run projects/part07_trade_map/dashboard/app.py
-uv run streamlit run projects/part08_price_volume/dashboard/app.py
+# 현재 6~9장의 참고용 Streamlit 대시보드
+uv run streamlit run projects/chapter06_kb_dashboard/dashboard/app.py
+uv run streamlit run projects/chapter07_price_gap_table/dashboard/app.py
+uv run streamlit run projects/chapter08_trade_map/dashboard/app.py
+uv run streamlit run projects/chapter09_price_volume/dashboard/app.py
 
 # 테스트
 uv run pytest tests/
@@ -132,7 +133,7 @@ uv run pytest tests/
 
 ## 환경변수
 
-아래는 현재 공개된 참고 코드의 설정입니다. 프롬프트로 새로 만든 도구의 설정은 AI가 안내한 실제 구현을 확인하세요. 다른 DB를 지정하지 않을 때는 `.env`에서 `KB_DB_PATH`와 `PRICE_DB_PATH` 줄을 삭제하거나 주석 처리합니다. 현재 참고 코드는 빈 문자열도 경로 설정으로 읽으므로 두 항목을 빈 값으로 두지 않습니다.
+아래는 현재 공개된 참고 코드의 설정입니다. 프롬프트로 새로 만든 도구의 설정은 AI가 안내한 실제 구현을 확인하세요. 대시보드의 DB 경로가 비어 있거나 없으면 기본 DB를 사용합니다. 값을 지정하면 해당 파일을 읽으며, 없는 파일을 새로 만들거나 다른 DB로 바꾸지 않습니다.
 
 | 이름 | 용도 |
 |------|------|
@@ -143,9 +144,18 @@ uv run pytest tests/
 | `ROI_SHEET_ID` | 2부 5장 수익률 계산 Google Sheets 출력 |
 | `GOOGLE_SERVICE_ACCOUNT_KEY_PATH` | Google 서비스 계정 JSON 키 경로 |
 | `KB_DB_PATH` | 2부 6장 대시보드용 외부 DuckDB 경로 |
+| `GAP_DB_PATH` | 2부 7장 가격·갭 비교 DB 경로 |
+| `TRADE_MAP_DB_PATH` | 2부 8장 거래량 지도 DB 경로 |
+| `PRICE_VOLUME_URL` | 7장에서 연결할 실행 중인 9장 대시보드 주소 |
 | `PRICE_DB_PATH` | 2부 9장 대시보드용 외부 DuckDB 경로 |
 
 Google Sheets를 쓰지 않으면 2부 4~5장은 콘솔에 결과를 출력합니다.
+
+## 수집·계산 결과를 확인할 때
+
+실거래 재수집은 요청한 연도·시도만 교체합니다. 일부 지역에서 오류가 발생하면 해당 거래유형의 저장을 보류하고 기존 자료를 보존합니다. 공동주택을 특정 시도만 수집할 때도 다른 시도 자료를 유지합니다. 빈 결과는 기존 자료를 지우지 않으므로 실행 로그와 DB의 실제 지역·기간·건수를 함께 확인하세요.
+
+4장 참고 코드는 4.4절의 후속 개선을 반영해 동일 기준월의 매매·신규 전세 중앙값을 사용합니다. 짧은 요청 예시나 다른 후속 수정 요청을 실행하면 현재 참고 코드와 결과가 달라질 수 있습니다.
 
 ## 데이터 파일 주의
 
@@ -161,18 +171,18 @@ credentials*.json
 
 ## 노트북
 
-현재 6·8·9장에 대응하는 탐색용 Jupyter Notebook이 기존 경로에 포함되어 있습니다.
+현재 6·8·9장에 대응하는 탐색용 Jupyter Notebook이 아래 경로에 포함되어 있습니다.
 
 ```text
-projects/part06_kb_dashboard/notebooks/
+projects/chapter06_kb_dashboard/notebooks/
   01_eda.ipynb
   02_preprocessing.ipynb
   03_chart_prototype.ipynb
-projects/part07_trade_map/notebooks/
+projects/chapter08_trade_map/notebooks/
   01_eda.ipynb
   02_preprocessing.ipynb
   03_map_prototype.ipynb
-projects/part08_price_volume/notebooks/
+projects/chapter09_price_volume/notebooks/
   01_eda.ipynb
   02_preprocessing.ipynb
   03_chart_prototype.ipynb

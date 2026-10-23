@@ -16,6 +16,7 @@ API 키 없이 사용 가능하다.
 
 import argparse
 import sys
+from pathlib import Path
 import time
 import duckdb
 import pandas as pd
@@ -89,17 +90,17 @@ def save_to_duckdb(df, table_name):
     DuckDB에 저장한다.
     기존 테이블이 있으면 삭제 후 재저장 (전량 교체).
     """
+    if table_name not in {"KB_매매가격지수", "KB_전세가격지수", "KB_전세가율"}:
+        raise ValueError("지원하지 않는 KB 테이블입니다.")
+    if df.empty:
+        return 0
+    Path(DB_PATH).parent.mkdir(parents=True, exist_ok=True)
     con = duckdb.connect(DB_PATH)
-
-    # 기존 테이블 삭제
-    con.execute(f'DROP TABLE IF EXISTS "{table_name}"')
-
-    # 새로 생성
-    con.execute(f'CREATE TABLE "{table_name}" AS SELECT * FROM df')
-
-    total = con.execute(f'SELECT COUNT(*) FROM "{table_name}"').fetchone()[0]
-    con.close()
-    return total
+    try:
+        con.execute(f'CREATE OR REPLACE TABLE "{table_name}" AS SELECT * FROM df')
+        return con.execute(f'SELECT COUNT(*) FROM "{table_name}"').fetchone()[0]
+    finally:
+        con.close()
 
 
 # ──────────────────────────────────────────────

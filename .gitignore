@@ -14,10 +14,10 @@ build/
 
 # Data files (대용량, 로컬 전용)
 data/
-!projects/part06_tracking/data/
-!projects/part06_tracking/data/watchlist.json
-!projects/part07_roi/data/
-!projects/part07_roi/data/targets.json
+!projects/chapter04_tracking/data/
+!projects/chapter04_tracking/data/watchlist.json
+!projects/chapter05_roi/data/
+!projects/chapter05_roi/data/targets.json
 
 # Runtime logs (자동 수집 실행 산출물)
 logs/
@@ -70,3 +70,10 @@ presentation/
 archive/
 feedback/part09_trade_map/ch03_versionA_full.html
 feedback/part09_trade_map/ch03_versionB_full.html
+
+# Local verification artifacts
+.pytest_cache/
+output/
+artifacts/
+.env.*
+!.env.example

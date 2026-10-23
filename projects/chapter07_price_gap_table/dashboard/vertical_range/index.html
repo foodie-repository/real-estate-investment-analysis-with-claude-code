@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<style>
+  :root { --accent: #b8b8b8; --text: #31333f; --track: #e2e4e7; }
+  * { box-sizing: border-box; }
+  body { margin: 0; color: var(--text); font: 12px system-ui, sans-serif; }
+  #control { position: relative; width: 100%; }
+  #label { text-align: center; padding-top: 4px; }
+  #rail { position: absolute; width: 100%; }
+  #track, #selected { position: absolute; left: calc(50% - 2px); width: 4px; border-radius: 2px; }
+  #track { top: 0; bottom: 0; background: var(--track); }
+  #selected { background: var(--accent); }
+  input { position: absolute; margin: 0; left: calc(50% - 12px); width: 24px; height: 100%; writing-mode: vertical-lr; direction: rtl; appearance: none; background: transparent; pointer-events: none; }
+  input::-webkit-slider-runnable-track { background: transparent; }
+  input::-webkit-slider-thumb { appearance: none; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); cursor: ns-resize; pointer-events: auto; }
+  input::-moz-range-thumb { width: 12px; height: 12px; border: none; border-radius: 50%; background: var(--accent); cursor: ns-resize; pointer-events: auto; }
+  input:focus-visible { outline: 1px solid var(--accent); outline-offset: 2px; }
+  output { position: absolute; left: 0; width: 100%; text-align: center; font-variant-numeric: tabular-nums; }
+  #high-value { top: -22px; }
+  #low-value { bottom: -22px; }
+</style>
+<div id="control">
+  <div id="label">Y축 범위</div>
+  <div id="rail">
+    <div id="track"></div><div id="selected"></div>
+    <output id="high-value"></output>
+    <input id="low" type="range" aria-label="Y축 최소값" aria-orientation="vertical">
+    <input id="high" type="range" aria-label="Y축 최대값" aria-orientation="vertical">
+    <output id="low-value"></output>
+  </div>
+</div>
+<script>
+  const low = document.getElementById('low'), high = document.getElementById('high');
+  let args, ready = false;
+  function send(type, fields = {}) {
+    window.parent.postMessage({isStreamlitMessage: true, type, ...fields}, '*');
+  }
+  function paint() {
+    const lo = Number(low.value), hi = Number(high.value), span = args.upper - args.lower;
+    const selected = document.getElementById('selected');
+    selected.style.top = `${(args.upper-hi)/span*100}%`;
+    selected.style.bottom = `${(lo-args.lower)/span*100}%`;
+    document.getElementById('low-value').textContent = lo.toFixed(2);
+    document.getElementById('high-value').textContent = hi.toFixed(2);
+    low.setAttribute('aria-valuetext', `${lo.toFixed(2)} ${args.metric}`);
+    high.setAttribute('aria-valuetext', `${hi.toFixed(2)} ${args.metric}`);
+  }
+  window.addEventListener('message', event => {
+    if (event.source !== window.parent || event.data.type !== 'streamlit:render') return;
+    args = event.data.args;
+    document.getElementById('control').style.height = `${args.height}px`;
+    document.getElementById('rail').style.top = `${args.top}px`;
+    document.getElementById('rail').style.bottom = `${args.bottom}px`;
+    document.getElementById('label').title = `Y축 범위 · ${args.metric}`;
+    for (const input of [low, high]) {
+      input.min = args.lower; input.max = args.upper; input.step = args.step;
+      input.disabled = Boolean(event.data.disabled);
+    }
+    if (!ready) { low.value = args.lower; high.value = args.upper; ready = true; }
+    const theme = event.data.theme;
+    if (theme) {
+      document.documentElement.style.setProperty('--text', theme.textColor);
+    }
+    paint();
+    send('streamlit:setFrameHeight', {height: args.height});
+  });
+  for (const input of [low, high]) {
+    input.addEventListener('input', () => {
+      if (Number(low.value) >= Number(high.value)) {
+        if (input === low) low.value = Number(high.value)-args.step;
+        else high.value = Number(low.value)+args.step;
+      }
+      paint();
+    });
+    input.addEventListener('change', () => send('streamlit:setComponentValue', {value: [Number(low.value), Number(high.value)]}));
+  }
+  send('streamlit:componentReady', {apiVersion: 1});
+</script>
+</html>

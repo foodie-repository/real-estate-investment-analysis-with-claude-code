@@ -4,7 +4,7 @@
 한국부동산원 API에서 전국 공동주택 단지 기본 정보를 수집하여
 DuckDB에 저장한다. 아파트만 필터링하여 저장한다.
 
-이 데이터는 Part04 관심단지 트래킹과 Part07 거래량 지도에서
+이 데이터는 4장 관심단지 트래킹과 8장 거래량 지도에서
 회전율 계산(거래량 ÷ 세대수)에 사용된다.
 
 사용법:
@@ -14,6 +14,7 @@ DuckDB에 저장한다. 아파트만 필터링하여 저장한다.
 
 import argparse
 import sys
+from pathlib import Path
 from datetime import date
 import duckdb
 import pandas as pd
@@ -80,21 +81,32 @@ def collect_공동주택(api, sido=None):
 
 
 # ──────────────────────────────────────────────
-# DuckDB 저장 (전량 교체)
+# DuckDB 저장 (요청한 지역 교체)
 # ──────────────────────────────────────────────
-def save_to_duckdb(df):
-    """
-    DuckDB에 저장한다.
-    마스터 데이터이므로 전량 교체한다.
-    """
+def save_to_duckdb(df, sido=None):
+    """전국 수집은 전체, 시도 수집은 해당 시도만 트랜잭션으로 교체한다."""
+    if df.empty:
+        return 0
+    if sido and not df["주소"].str.startswith(sido + " ").all():
+        raise ValueError("수집 시도 밖의 공동주택이 포함되어 있습니다.")
+    Path(DB_PATH).parent.mkdir(parents=True, exist_ok=True)
     con = duckdb.connect(DB_PATH)
-
-    con.execute('DROP TABLE IF EXISTS "공동주택_전국"')
-    con.execute('CREATE TABLE "공동주택_전국" AS SELECT * FROM df')
-
-    total = con.execute('SELECT COUNT(*) FROM "공동주택_전국"').fetchone()[0]
-    con.close()
-    return total
+    try:
+        con.execute("BEGIN")
+        exists = con.execute("SELECT 1 FROM information_schema.tables WHERE table_name='공동주택_전국'").fetchone()
+        if sido and exists:
+            con.execute('DELETE FROM 공동주택_전국 WHERE starts_with(주소, ?)', [sido + " "])
+            con.execute('INSERT INTO 공동주택_전국 BY NAME SELECT * FROM df')
+        else:
+            con.execute('CREATE OR REPLACE TABLE 공동주택_전국 AS SELECT * FROM df')
+        total = con.execute('SELECT COUNT(*) FROM 공동주택_전국').fetchone()[0]
+        con.execute("COMMIT")
+        return total
+    except Exception:
+        con.execute("ROLLBACK")
+        raise
+    finally:
+        con.close()
 
 
 # ──────────────────────────────────────────────
@@ -118,7 +130,7 @@ def main():
     df = collect_공동주택(api, args.sido)
 
     if len(df) > 0:
-        total = save_to_duckdb(df)
+        total = save_to_duckdb(df, args.sido)
 
         print(f"\n{'=' * 60}")
         print("수집 완료")
