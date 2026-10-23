@@ -6,38 +6,40 @@
 
 ## 책의 목차
 
-출판사 최종 편집본의 본문 구조에 맞춰 1부와 2부를 구분했습니다. 장별 자료 링크를 따라가면 책의 설명과 함께 사용할 프롬프트와 실행 예제를 바로 확인할 수 있습니다.
+프롬프트는 2026-10-24 현재 원고의 1~9장과 부록 1·2를 기준으로 정리했습니다. 참고용 완성 코드의 기존 폴더는 유지하며, 아래 표에서 현재 장과 대응하는 경로를 안내합니다.
 
-### 1부. AI 부동산 투자의 준비
+### 1부. 바이브 코딩으로 부동산 데이터 분석 시작하기
 
 | 장 | 제목 | 독자용 자료 |
 | --- | --- | --- |
 | 1장 | AI로 시작하는 데이터 기반 부동산 투자 | - |
-| 2장 | 실습 환경 구축 | [프롬프트](prompts/part01/chapter02/) |
-| 3장 | 데이터 수집과 전처리 | [프롬프트](prompts/part01/chapter03/) |
+| 2장 | 클로드 코드와 안티그래비티로 실습 환경 만들기 | [프롬프트](prompts/part01/chapter02/) |
+| 3장 | 실거래가·KB부동산 데이터 자동으로 모으고 다듬기 | [프롬프트](prompts/part01/chapter03/) |
 
-### 2부. 데이터 기반 부동산 투자 분석
+### 2부. 관심단지와 지역을 데이터로 분석하는 도구 만들기
 
-| 장 | 제목 | 프롬프트 | 실행 프로젝트 |
+| 장 | 제목 | 프롬프트 | 참고용 완성 코드 |
 | --- | --- | --- | --- |
-| 4장 | 관심단지 자동 트래킹 | [프롬프트](prompts/part02/chapter04/) | [프로젝트](projects/part04_tracking/) |
-| 5장 | 수익률 계산기 시스템 구축 | [프롬프트](prompts/part02/chapter05/) | [프로젝트](projects/part05_roi/) |
-| 6장 | KB부동산 시각화 대시보드 구축 | [프롬프트](prompts/part02/chapter06/) | [프로젝트](projects/part06_kb_dashboard/) |
-| 7장 | 거래량 지도 대시보드 구축 | [프롬프트](prompts/part02/chapter07/) | [프로젝트](projects/part07_trade_map/) |
-| 8장 | 가격 및 거래량 대시보드 구축 | [프롬프트](prompts/part02/chapter08/) | [프로젝트](projects/part08_price_volume/) |
+| 4장 | 관심단지 실거래가를 자동으로 추적하는 시트 만들기 | [프롬프트](prompts/part02/chapter04/) | [프로젝트](projects/part04_tracking/) |
+| 5장 | 매수 시점별 아파트 수익률 계산기 만들기 | [프롬프트](prompts/part02/chapter05/) | [프로젝트](projects/part05_roi/) |
+| 6장 | KB부동산 지수로 시장 흐름을 읽는 지도 대시보드 만들기 | [프롬프트](prompts/part02/chapter06/) | [프로젝트](projects/part06_kb_dashboard/) |
+| 7장 | 실거래가로 단지별 가격·갭을 비교하는 대시보드 만들기 | [프롬프트](prompts/part02/chapter07/) | 프롬프트로 구현 |
+| 8장 | 거래량 지도로 지역 대장 단지를 찾는 대시보드 만들기 | [프롬프트](prompts/part02/chapter08/) | [프로젝트](projects/part07_trade_map/) |
+| 9장 | 단지 가격·거래량 대시보드와 AI 투자 분석 보고서 만들기 | [프롬프트](prompts/part02/chapter09/) | [프로젝트](projects/part08_price_volume/) |
 
-### 에필로그
+### 부록
 
-- 에필로그
+- [부록 1. 부동산 데이터를 제대로 읽는 시각화 기본 원칙 — 차트 검수 요청](prompts/appendix/01_visualization_principles.md)
+- [부록 2. 실습에 다시 쓰는 참고 자료 — 후속 요청](prompts/appendix/02_practice_reference.md)
 
 절별 구성과 프롬프트 전문은 [도서 실습 프롬프트 목차](prompts/README.md)에서 확인할 수 있습니다.
 
 ## 포함된 내용
 
 ```text
-prompts/                 # 출판사 최종 편집본 기준 실습용 프롬프트
+prompts/                 # 현재 원고의 2~9장·부록 실습용 프롬프트
 src/                     # 공통 설정, 데이터 수집기, 전처리, 주소 유틸리티
-projects/                # 출판사 최종 편집본 기준 2부 4~8장 실행 예제
+projects/                # 기존 경로를 유지한 참고용 완성 사례
 tests/                   # 주요 단위 테스트와 통합 테스트
 pyproject.toml           # Python 의존성
 uv.lock                  # 재현 가능한 uv 잠금 파일
@@ -46,7 +48,7 @@ uv.lock                  # 재현 가능한 uv 잠금 파일
 
 ## 책의 프롬프트
 
-책에 실린 프롬프트는 [도서 실습 프롬프트 목차](prompts/README.md)에서 부·장·절 순서대로 확인할 수 있습니다. 실행 예제 폴더도 4~8장 번호에 맞춰 정리했습니다.
+책에 실린 프롬프트는 [도서 실습 프롬프트 목차](prompts/README.md)에서 부·장·절 순서대로 확인할 수 있습니다. 참고용 완성 코드는 기존 경로를 유지합니다. 현재 8장은 `part07_trade_map`, 9장은 `part08_price_volume`에 대응하며, 7장의 가격·갭 대시보드는 프롬프트로 구현합니다.
 
 ### 예시 입력 자료
 
@@ -77,7 +79,7 @@ uv run python -m src.collectors.좌표
 uv run python -m projects.part04_tracking.main
 uv run python -m projects.part05_roi.main
 
-# 2부 6~8장 Streamlit 대시보드
+# 현재 6·8·9장의 참고용 Streamlit 대시보드
 uv run streamlit run projects/part06_kb_dashboard/dashboard/app.py
 uv run streamlit run projects/part07_trade_map/dashboard/app.py
 uv run streamlit run projects/part08_price_volume/dashboard/app.py
@@ -99,7 +101,7 @@ uv run pytest tests/
 | `ROI_SHEET_ID` | 2부 5장 수익률 계산 Google Sheets 출력 |
 | `GOOGLE_SERVICE_ACCOUNT_KEY_PATH` | Google 서비스 계정 JSON 키 경로 |
 | `KB_DB_PATH` | 2부 6장 대시보드용 외부 DuckDB 경로 |
-| `PRICE_DB_PATH` | 2부 8장 대시보드용 외부 DuckDB 경로 |
+| `PRICE_DB_PATH` | 2부 9장 대시보드용 외부 DuckDB 경로 |
 
 Google Sheets를 쓰지 않으면 2부 4~5장은 콘솔에 결과를 출력합니다.
 
@@ -117,7 +119,7 @@ credentials*.json
 
 ## 노트북
 
-2부 6~8장에는 탐색용 Jupyter Notebook이 포함되어 있습니다.
+현재 6·8·9장에 대응하는 탐색용 Jupyter Notebook이 기존 경로에 포함되어 있습니다.
 
 ```text
 projects/part06_kb_dashboard/notebooks/
