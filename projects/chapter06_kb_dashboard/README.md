@@ -4,11 +4,11 @@
 
 ## 실행 화면
 
-![6장 KB 지수의 변화 추이 — 예시 데이터 실행 화면](../../assets/screenshots/chapter06-kb-trend.png)
+![6장 KB 지수와 거래량 지도 — 원고에 수록된 실제 데이터 실행 화면](../../assets/screenshots/chapter06-kb-dashboard.png)
 
-지역과 기간을 선택해 KB 지수의 전년 동월 대비 변화를 확인합니다.
+서울의 2026년 4월 매매·전세 지수 증감률, 전세가율과 매매 거래량을 네 지도로 비교합니다.
 
-> 예시 데이터로 구성한 실제 실행 화면입니다. 단지·가격·거래량·지수는 가상 검증 자료이며, 실제 시장 현황을 나타내지 않습니다. [큰 이미지 보기](../../assets/screenshots/chapter06-kb-trend.png) · [데이터와 촬영 기준](../../assets/screenshots/README.md)
+> 책 원고에 수록된 실제 데이터 실행 화면입니다. 캡처 당시의 조회 조건을 보여주며, 현재 시점의 시장 현황과는 다를 수 있습니다. [큰 이미지 보기](../../assets/screenshots/chapter06-kb-dashboard.png) · [조회 조건과 출처](../../assets/screenshots/README.md)
 
 ## 필요한 자료와 계산 기준
 

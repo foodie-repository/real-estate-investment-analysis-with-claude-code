@@ -4,11 +4,11 @@
 
 ## 실행 화면
 
-![9장 가격·거래량 상세 분석 — 예시 데이터 실행 화면](../../assets/screenshots/chapter09-price-volume.png)
+![9장 가격·거래량 상세 분석 — 원고에 수록된 실제 데이터 실행 화면](../../assets/screenshots/chapter09-price-volume.png)
 
-개별 매매·전세 거래와 월별 거래량을 함께 살펴봅니다. 7장에서 선택한 단지를 연결해 상세 조회할 수도 있습니다.
+7장에서 선택한 송도동 두 단지의 30평대를 연결해 월별 매매·전세 중위가와 거래량을 비교합니다. 화면의 조회 기간은 2019~2026년입니다.
 
-> 예시 데이터로 구성한 실제 실행 화면입니다. 단지·가격·거래량·지수는 가상 검증 자료이며, 실제 시장 현황을 나타내지 않습니다. [큰 이미지 보기](../../assets/screenshots/chapter09-price-volume.png) · [데이터와 촬영 기준](../../assets/screenshots/README.md)
+> 책 원고에 수록된 실제 데이터 실행 화면입니다. 캡처 당시의 조회 조건을 보여주며, 현재 시점의 시장 현황과는 다를 수 있습니다. [큰 이미지 보기](../../assets/screenshots/chapter09-price-volume.png) · [조회 조건과 출처](../../assets/screenshots/README.md)
 
 ## 필요한 자료와 계산 기준
 
