@@ -4,7 +4,7 @@
 
 이 저장소는 책의 실습 프롬프트와 참고용 완성 코드를 제공합니다. 책을 따라 AI와 대화하며 관심단지 추적, 수익률 비교, 지역·단지 대시보드를 만들 때 사용합니다. 책 본문 전체와 AI 답변 예시는 포함하지 않습니다.
 
-**[프롬프트 전체 목차](prompts/README.md)** · **[부록 1: 차트 검수](prompts/appendix/01_visualization_principles.md)** · **[부록 2: 후속 요청](prompts/appendix/02_practice_reference.md)**
+**[프롬프트 전체 목차](prompts/README.md)** · **[부록 1: 차트 검수](prompts/appendix/01_visualization_principles.md)** · **[부록 2: 후속 요청](prompts/appendix/02_practice_reference.md)** · **[부록 3: 프롬프트 응용](prompts/appendix/03_prompt_adaptation.md)**
 
 ## 직접 만들고 실행할 수 있는 분석 화면
 
@@ -34,7 +34,7 @@
 
 ## 자료의 기준과 제공 범위
 
-2026-10-24 기준으로 1장부터 부록 2까지 프롬프트를 대조했습니다. 2~9장과 부록의 요청 **211개를 25개 파일**에 담았으며, 1장은 독립된 실습 프롬프트가 없습니다.
+2026-10-24 기준으로 1장부터 부록 3까지 프롬프트를 대조했습니다. 2~9장과 부록의 요청 **217개를 26개 파일**에 담았으며, 1장은 독립된 실습 프롬프트가 없습니다.
 
 프롬프트는 현재 원고를 기준으로 갱신했습니다. 참고 코드는 현재 장 번호와 같은 `chapter04`~`chapter09` 경로로 갱신했습니다. 기존 `partXX` 실행 명령은 연결용 진입점으로 유지합니다. 모든 프롬프트를 각각 AI에 다시 실행한 것은 아니며, 코드의 검증 범위는 [검증 기록](VALIDATION.md)에 명시합니다. 책을 따라 만든 결과물은 파일명이나 코드 구조보다 요청한 기능과 검증 결과를 기준으로 확인하세요.
 
@@ -67,6 +67,7 @@
 
 - [부록 1. 부동산 데이터를 제대로 읽는 시각화 기본 원칙 — 차트 검수 요청](prompts/appendix/01_visualization_principles.md)
 - [부록 2. 실습에 다시 쓰는 참고 자료 — 후속 요청](prompts/appendix/02_practice_reference.md)
+- [부록 3. 책의 프롬프트를 바꾸어 나만의 대시보드 만들기 — 월세 비중 대시보드 요청](prompts/appendix/03_prompt_adaptation.md)
 
 절별 구성과 프롬프트 전문은 [도서 실습 프롬프트 목차](prompts/README.md)에서 확인할 수 있습니다.
 
