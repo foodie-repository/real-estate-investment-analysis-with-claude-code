@@ -16,7 +16,7 @@
 
 [![9장 가격·거래량 대시보드: 매매·전세 가격과 월별 거래량을 함께 보는 실제 데이터 화면](assets/screenshots/chapter09-price-volume-manuscript-d68e488d.png)](projects/chapter09_price_volume/)
 
-https://github.com/user-attachments/assets/923443cf-1c0f-4a56-b903-8ee8c40847b3
+https://github.com/user-attachments/assets/2f520925-7853-404b-8631-f04b97fba1a8
 
 **가격의 변화와 거래량을 한 화면에서 확인합니다.** 7장에서 단지별 가격·갭을 비교하고, 선택한 단지를 9장으로 연결해 상세 조회할 수 있습니다. [7장 비교 대시보드](projects/chapter07_price_gap_table/) · [9장 실행 안내](projects/chapter09_price_volume/) · [4~9장 결과 화면 보기](#책의-목차와-실습-자료)
 
