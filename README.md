@@ -4,6 +4,10 @@
 
 이 저장소는 책의 실습 프롬프트와 참고용 완성 코드를 제공합니다. 책을 따라 AI와 대화하며 관심단지 추적, 수익률 비교, 지역·단지 대시보드를 만들 때 사용합니다. 책 본문 전체와 AI 답변 예시는 포함하지 않습니다.
 
+**[책 미리보기 — 좌우로 넘겨 읽기](https://foodie-repository.github.io/real-estate-investment-analysis-with-claude-code/)**
+
+구매 전에 전체 목차와 저자 소개, 저자의 말, 이 책에 대하여, 이 책을 읽는 방법을 먼저 읽어보세요. PC와 모바일에서 페이지를 넘기며 책의 방향과 완성할 분석 도구를 확인할 수 있습니다.
+
 **[프롬프트 전체 목차](prompts/README.md)** · **[부록 1: 차트 검수](prompts/appendix/01_visualization_principles.md)** · **[부록 2: 후속 요청](prompts/appendix/02_practice_reference.md)** · **[부록 3: 프롬프트 응용](prompts/appendix/03_prompt_adaptation.md)**
 
 ## 직접 만들고 실행할 수 있는 분석 화면
@@ -18,6 +22,7 @@
 
 | 하려는 일 | 시작할 곳 |
 | --- | --- |
+| 구매 전에 책의 방향과 구성을 살펴보기 | [책 미리보기](https://foodie-repository.github.io/real-estate-investment-analysis-with-claude-code/)에서 전체 목차와 앞부속을 읽습니다. |
 | 책을 따라 직접 도구 만들기 | 아래 장별 프롬프트에서 해당 절의 요청을 복사합니다. 프롬프트만 볼 때는 저장소를 내려받을 필요가 없습니다. |
 | 만든 도구를 다시 사용하거나 결과 점검하기 | [부록 2의 후속 요청](prompts/appendix/02_practice_reference.md)을 자신의 대상·기간에 맞춰 사용합니다. |
 | 차트를 잘못 해석할 위험 점검하기 | [부록 1의 차트 검수 요청](prompts/appendix/01_visualization_principles.md)에 차트나 집계 결과를 함께 전달합니다. |
