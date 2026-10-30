@@ -4,9 +4,11 @@
 
 이 저장소는 책의 실습 프롬프트와 참고용 완성 코드를 제공합니다. 책을 따라 AI와 대화하며 관심단지 추적, 수익률 비교, 지역·단지 대시보드를 만들 때 사용합니다. 책 본문 전체와 AI 답변 예시는 포함하지 않습니다.
 
-**[책 미리보기 — 좌우로 넘겨 읽기](https://foodie-repository.github.io/real-estate-investment-analysis-with-claude-code/)**
+[![책 미리보기 실제 화면: 왼쪽 목차와 두 쪽 본문, 완성 도구의 그림, 이전·다음 버튼이 있는 독서 화면](assets/screenshots/book-preview-reading-guide-595c0c66.png)](https://foodie-repository.github.io/real-estate-investment-analysis-with-claude-code/)
 
-구매 전에 전체 목차와 저자 소개, 저자의 말, 이 책에 대하여, 이 책을 읽는 방법을 먼저 읽어보세요. PC와 모바일에서 페이지를 넘기며 책의 방향과 완성할 분석 도구를 확인할 수 있습니다.
+**이미지를 눌러 책을 펼쳐보세요.** 구매 전에 전체 목차와 저자 소개, 저자의 말, 이 책에 대하여, 이 책을 읽는 방법을 먼저 읽을 수 있습니다. PC와 모바일에서 페이지를 넘기며 책의 방향과 완성할 분석 도구를 확인해 보세요.
+
+**[책 미리보기 — 좌우로 넘겨 읽기](https://foodie-repository.github.io/real-estate-investment-analysis-with-claude-code/)**
 
 **[프롬프트 전체 목차](prompts/README.md)** · **[부록 1: 차트 검수](prompts/appendix/01_visualization_principles.md)** · **[부록 2: 후속 요청](prompts/appendix/02_practice_reference.md)** · **[부록 3: 프롬프트 응용](prompts/appendix/03_prompt_adaptation.md)**
 
