@@ -15,7 +15,7 @@ let columnIndex = 0;
 let columns = 1;
 let visibleColumns = 1;
 let stride = 0;
-let fontSize = 18;
+let fontSize = 16;
 let resizeTimer;
 let loading = false;
 
