@@ -250,6 +250,7 @@ src/                     # 공통 설정, 데이터 수집기, 전처리, 주소
 projects/                # 4~9장 참고용 완성 사례와 이전 실행 경로의 연결 파일
 assets/screenshots/      # README에서 연결하는 시트·대시보드 결과 화면
 tests/                   # 주요 단위 테스트와 통합 테스트
+main.py                  # 전체 도구 구성과 대표 실행 명령을 출력하는 빠른 안내
 pyproject.toml           # Python 의존성
 uv.lock                  # 재현 가능한 uv 잠금 파일
 .env.example             # 환경변수 템플릿
@@ -287,6 +288,8 @@ if (-not (Test-Path .env)) { Copy-Item .env.example .env }
 `.env`에는 사용할 기능에 필요한 키와 설정을 입력합니다. 패키지를 설치하는 것만으로 실거래 데이터가 생기지는 않습니다. 3장의 안내에 따라 필요한 지역·기간의 자료를 먼저 수집하세요. 참고 코드의 기본 DB는 `data/apt_investment.duckdb`이며, 지도에 필요한 시군구 경계는 `data/boundaries/시군구.geojson`에 따로 준비합니다.
 
 ## 참고 코드의 실행 명령
+
+구성과 대표 명령을 빠르게 확인하려면 저장소 루트에서 `uv run python main.py`를 실행합니다. 각 도구를 실제로 실행할 때는 아래 장별 명령을 사용하세요.
 
 아래 명령은 저장소 루트에서 실행합니다. API 수집은 실제 자료를 요청하고, 구글 시트가 설정된 4·5장 실행은 해당 시트에 결과를 기록할 수 있습니다.
 
