@@ -77,3 +77,5 @@ output/
 artifacts/
 .env.*
 !.env.example
+
+*.duckdb*

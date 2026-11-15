@@ -16,7 +16,7 @@ def test_chapter06_to_chapter09_notebook_inventory():
             "02_preprocessing.ipynb",
             "03_chart_prototype.ipynb",
         ],
-        "chapter08_trade_map": [
+        "chapter07_trade_map": [
             "01_eda.ipynb",
             "02_preprocessing.ipynb",
             "03_map_prototype.ipynb",

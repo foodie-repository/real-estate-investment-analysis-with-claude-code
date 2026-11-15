@@ -3,7 +3,7 @@ import pandas as pd
 import streamlit as st
 
 from projects.chapter06_kb_dashboard.dashboard.axis_controls import value_bounds
-from projects.chapter07_price_gap_table.dashboard.vertical_slider import vertical_range
+from projects.chapter08_price_gap_table.dashboard.vertical_slider import vertical_range
 from projects.chapter09_price_volume.dashboard.render import render_chart
 from projects.chapter09_price_volume.dashboard.charts import _set_volume_axis, set_date_ticks, volume_totals
 

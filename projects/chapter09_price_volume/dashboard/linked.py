@@ -1,4 +1,4 @@
-"""7장에서 전달한 정확한 주소·단지·평형대만 SQL로 조회한다."""
+"""8장에서 전달한 정확한 주소·단지·평형대만 SQL로 조회한다."""
 from contextlib import contextmanager
 from pathlib import Path
 

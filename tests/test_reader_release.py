@@ -72,7 +72,7 @@ def test_blank_optional_database_uses_default(chapter,module,var,monkeypatch):
     finally:m._DB_PATH=previous
 
 
-@pytest.mark.parametrize('folder,var',[('chapter06_kb_dashboard','KB_DB_PATH'),('chapter07_price_gap_table','GAP_DB_PATH'),('chapter08_trade_map','TRADE_MAP_DB_PATH'),('chapter09_price_volume','PRICE_DB_PATH')])
+@pytest.mark.parametrize('folder,var',[('chapter06_kb_dashboard','KB_DB_PATH'),('chapter08_price_gap_table','GAP_DB_PATH'),('chapter07_trade_map','TRADE_MAP_DB_PATH'),('chapter09_price_volume','PRICE_DB_PATH')])
 def test_missing_database_shows_setup_message(folder,var,tmp_path,monkeypatch):
     import streamlit as st
     st.cache_data.clear();st.cache_resource.clear()

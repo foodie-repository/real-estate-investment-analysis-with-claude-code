@@ -1,4 +1,4 @@
-"""7장 선택 → 9장 상세 조회의 대상과 상태 보존을 검증한다."""
+"""8장 선택 → 9장 상세 조회의 대상과 상태 보존을 검증한다."""
 from urllib.parse import parse_qs, urlsplit
 
 import duckdb
@@ -147,7 +147,7 @@ def test_invalid_link_ui_does_not_run_default_region(tmp_path, monkeypatch):
 
 @pytest.mark.parametrize('schema', ['external','road_only','lease_lot_missing'])
 def test_same_identity_as_gap_dashboard_in_reader_and_external_schemas(tmp_path, schema):
-    from projects.chapter07_price_gap_table.dashboard.analysis import compare, Query
+    from projects.chapter08_price_gap_table.dashboard.analysis import compare, Query
     path = tmp_path/'identity.duckdb'
     make_db(path)
     con=duckdb.connect(str(path))

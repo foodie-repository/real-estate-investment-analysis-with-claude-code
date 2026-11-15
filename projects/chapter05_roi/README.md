@@ -1,6 +1,6 @@
 # 5장. 매수 시점별 수익률 계산
 
-[이 장의 프롬프트](../../prompts/part02/chapter05/) · [전체 실행 안내](../../README.md)
+[이 장의 프롬프트](../../prompts/prompt_ch05_roi.md) · [전체 실행 안내](../../README.md)
 
 ## 결과 화면
 

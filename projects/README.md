@@ -1,14 +1,14 @@
 # 장별 실행 프로젝트
 
-현재 책의 4~9장에 대응하는 참고 코드입니다. [전체 프롬프트](../prompts/README.md)와 함께 사용하고, 설치·데이터 준비는 [저장소 안내](../README.md)를 따르세요.
+개정본 4~9장에 대응하는 참고 코드입니다. [전체 프롬프트](../prompts/README.md)와 함께 사용하고, 설치·데이터 준비는 [저장소 안내](../README.md)를 따르세요.
 
 | 장 | 도구 | 실행 안내 |
 | --- | --- | --- |
 | 4장 | 관심단지 시세 트래킹 | [chapter04_tracking](chapter04_tracking/README.md) |
 | 5장 | 매수 시점별 수익률 계산 | [chapter05_roi](chapter05_roi/README.md) |
 | 6장 | KB부동산 대시보드 | [chapter06_kb_dashboard](chapter06_kb_dashboard/README.md) |
-| 7장 | 가격·갭 비교 대시보드 | [chapter07_price_gap_table](chapter07_price_gap_table/README.md) |
-| 8장 | 거래량·회전율 지도 | [chapter08_trade_map](chapter08_trade_map/README.md) |
+| 7장 | 거래량·회전율 지도 | [chapter07_trade_map](chapter07_trade_map/README.md) |
+| 8장 | 가격·갭 비교 대시보드 | [chapter08_price_gap_table](chapter08_price_gap_table/README.md) |
 | 9장 | 가격·거래량 대시보드 | [chapter09_price_volume](chapter09_price_volume/README.md) |
 
 ## 기존 경로에서 업데이트하는 경우
@@ -20,7 +20,7 @@
 | `part04_tracking` | [chapter04_tracking](chapter04_tracking/) |
 | `part05_roi` | [chapter05_roi](chapter05_roi/) |
 | `part06_kb_dashboard` | [chapter06_kb_dashboard](chapter06_kb_dashboard/) |
-| `part07_trade_map` | [chapter08_trade_map](chapter08_trade_map/) |
+| `part07_trade_map` | [chapter07_trade_map](chapter07_trade_map/) |
 | `part08_price_volume` | [chapter09_price_volume](chapter09_price_volume/) |
 
 기존 관심단지·분석 대상 JSON을 수정했다면 먼저 백업한 뒤 현재 장 폴더의 `data/`로 옮깁니다. 기존 폴더의 목록을 자동으로 덮어쓰거나 읽지 않습니다.

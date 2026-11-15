@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
-from projects.chapter07_price_gap_table.dashboard.vertical_slider import vertical_range
+from projects.chapter08_price_gap_table.dashboard.vertical_slider import vertical_range
 
 
 def value_bounds(values, unit, baseline=None):

@@ -1,6 +1,6 @@
 # 6장. KB부동산 대시보드
 
-[이 장의 프롬프트](../../prompts/part02/chapter06/) · [전체 실행 안내](../../README.md)
+[이 장의 프롬프트](../../prompts/prompt_ch06_kb_dashboard.md) · [전체 실행 안내](../../README.md)
 
 ## 실행 화면
 

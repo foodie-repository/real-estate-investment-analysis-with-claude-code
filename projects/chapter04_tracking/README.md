@@ -1,14 +1,14 @@
 # 4장. 관심단지 시세 트래킹
 
-[이 장의 프롬프트](../../prompts/part02/chapter04/) · [전체 실행 안내](../../README.md)
+[이 장의 프롬프트](../../prompts/prompt_ch04_tracking.md) · [전체 실행 안내](../../README.md)
 
 ## 결과 화면
 
-![4장 관심단지 시트 — 원고에 수록된 결과 화면](../../assets/screenshots/chapter04-tracking-sheet-manuscript-e1a0884d.png)
+![4장 관심단지 시트 — 원고에 수록된 결과 화면](../../assets/screenshots/chapter04-tracking-sheet-manuscript-6a6cc039.png)
 
 원고 그림 4-02의 관심단지 트래킹 시트입니다. 고덕그라시움·헬리오시티·래미안솔베뉴의 가격과 갭 등을 한 시트에서 확인하는 화면이며, 화면의 마지막 업데이트 표시는 2026-04-27 22:33입니다. 이 원고 화면은 최근 거래가를 표시하는 당시 버전으로, 현재 참고 코드의 동일 기준월 중앙값 방식과는 차이가 있습니다.
 
-[큰 이미지 보기](../../assets/screenshots/chapter04-tracking-sheet-manuscript-e1a0884d.png) · [조회 조건과 출처](../../assets/screenshots/README.md)
+[큰 이미지 보기](../../assets/screenshots/chapter04-tracking-sheet-manuscript-6a6cc039.png) · [조회 조건과 출처](../../assets/screenshots/README.md)
 
 ## 필요한 자료와 계산 기준
 
