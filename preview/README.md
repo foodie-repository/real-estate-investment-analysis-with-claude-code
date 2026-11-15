@@ -15,3 +15,5 @@
 책의 발췌문과 이미지는 저작자 표시를 유지한 열람용 샘플입니다. 저장소의 코드·실습 프롬프트 이용 조건을 책 원고 전체의 재사용 허락으로 해석하지 마세요. 재사용 범위는 저자에게 확인해 주세요. 제목용 Do Hyeon 글꼴의 SIL Open Font License는 `assets/OFL-DoHyeon.txt`에 포함되어 있습니다.
 
 [실습 자료 저장소로 이동](https://github.com/foodie-repository/real-estate-investment-analysis-with-claude-code)
+
+[실습 자료 안내 페이지](https://foodie-repository.github.io/real-estate-investment-analysis-with-claude-code/materials/)에서 PDF 모음집과 장별 프롬프트를 받고 복사할 수 있습니다. 내려받기 파일은 배포할 때 저장소의 prompts/ 원본에서 복사합니다.

@@ -30,3 +30,7 @@
 [이번 검증 범위](VALIDATION.md) · [프롬프트 전문과 PDF](prompts/README.md)
 
 4장 결과 화면은 원고에 반영된 여백 조정본으로 갱신했습니다. 7·8장 화면 파일명과 캡션도 개정본 번호로 맞췄습니다.
+
+## 실습 자료 안내 페이지
+
+[실습 자료 안내 페이지](https://foodie-repository.github.io/real-estate-investment-analysis-with-claude-code/materials/)에서 PDF를 내려받거나 4~9장 프롬프트 전문을 바로 복사할 수 있습니다. 기존 책 미리보기와 GitHub 파일도 계속 이용할 수 있습니다. 배포할 때 `prompts/`의 원본을 웹 다운로드 경로로 복사하므로 두 자료의 문안은 같습니다.

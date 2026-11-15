@@ -5,6 +5,8 @@ on:
     branches: [main]
     paths:
       - 'preview/**'
+      - 'prompts/prompt_*.md'
+      - 'prompts/prompt_collection.pdf'
       - '.github/workflows/book-preview.yml'
   workflow_dispatch:
 
@@ -30,7 +32,11 @@ jobs:
         uses: actions/checkout@v6
       - name: Configure Pages
         uses: actions/configure-pages@v5
-      - name: Upload book preview only
+      - name: Prepare reader downloads from canonical prompts
+        run: |
+          mkdir -p preview/materials/files
+          cp prompts/prompt_*.md prompts/prompt_collection.pdf preview/materials/files/
+      - name: Upload book preview and reader materials
         uses: actions/upload-pages-artifact@v4
         with:
           path: preview

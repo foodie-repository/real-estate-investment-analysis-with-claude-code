@@ -79,3 +79,6 @@ artifacts/
 !.env.example
 
 *.duckdb*
+
+# Built from canonical prompts when publishing GitHub Pages
+/preview/materials/files/

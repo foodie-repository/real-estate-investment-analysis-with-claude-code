@@ -1,5 +1,8 @@
 # 감을 확신으로 바꾸는 AI 부동산 투자 — 실습 자료
 
+**[실습 자료 안내 페이지 열기](https://foodie-repository.github.io/real-estate-investment-analysis-with-claude-code/materials/)**
+
+
 책의 4~9장에서 만드는 분석 도구의 프롬프트와 참고용 완성 코드입니다. 2장에서 실습 환경을 준비하고 3장에서 데이터를 수집한 뒤 사용합니다. 실제 거래 데이터와 API 키, 구글 서비스 계정 키는 포함하지 않습니다.
 
 2026년 11월 16일 개정본의 장 순서를 기준으로 제공합니다. **7장은 거래량 지도, 8장은 가격·갭 비교**입니다. [변경 목록](CHANGES.md) · [검증 기록](VALIDATION.md) · [이전 판본 자료](legacy/README.md)

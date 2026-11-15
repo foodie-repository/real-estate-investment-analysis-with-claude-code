@@ -1,5 +1,8 @@
 # 실습 프롬프트
 
+**[실습 자료 안내 페이지 열기](https://foodie-repository.github.io/real-estate-investment-analysis-with-claude-code/materials/)**
+
+
 4~9장에서 도구를 처음 만들 때 사용하는 프롬프트 전문입니다. 책을 읽으며 문안을 살펴볼 때는 PDF 모음집을, 실습할 때는 아래 표의 장별 파일을 이용합니다. 책의 해당 절에서 준비 자료와 설계 이유를 확인한 뒤 필요한 문안 하나를 사용합니다.
 
 ## 프롬프트 전문 모음집 PDF
