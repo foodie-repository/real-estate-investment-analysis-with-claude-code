@@ -11,3 +11,5 @@
 @media(max-height:480px){.book-cover .cover-eyebrow{display:none}.book-cover h1{font-size:22px;line-height:1.15}.book-cover .cover-author{margin:6px 0}.book-cover .cover-subtitle{font-size:12px}.book-cover .cover-open{padding:6px 10px}.sidebar-book{margin:20px 0}.sidebar-bottom{padding-top:12px}}
 
 @media(max-width:360px){.book-cover h1{font-size:30px}.book-cover .cover-eyebrow{margin-bottom:12px}.book-cover .cover-subtitle{font-size:14px}.book-cover .cover-author{margin:14px 0}.book-cover .cover-note{display:none}}
+
+.book-flow .materials-access img{display:block;width:104px;max-width:100%;height:auto;margin:0 0 .65em}
