@@ -10,34 +10,7 @@
 
 https://github.com/user-attachments/assets/b181e7bd-d273-4cd6-b6b0-26b564d1008c
 
-## 책의 목차
-
-### 1부. 바이브 코딩으로 부동산 데이터 분석 시작하기
-
-- 1장. AI로 시작하는 데이터 기반 부동산 투자
-- 2장. 클로드 코드와 안티그래비티로 실습 환경 만들기
-- 3장. 실거래가·KB부동산 데이터를 자동으로 모으고 다듬기
-
-### 2부. 관심단지와 지역을 데이터로 분석하는 도구 만들기
-
-| 장 제목 | 실습 자료 |
-| --- | --- |
-| 4장. 관심단지 실거래가를 자동으로 추적하는 시트 만들기 | [프롬프트](prompts/prompt_ch04_tracking.md) · [실행 안내](projects/chapter04_tracking/README.md) · [결과 화면](assets/screenshots/chapter04-tracking-sheet-manuscript-6a6cc039.png) |
-| 5장. 매수 시점별 아파트 수익률 계산기 만들기 | [프롬프트](prompts/prompt_ch05_roi.md) · [실행 안내](projects/chapter05_roi/README.md) · [결과 화면](assets/screenshots/chapter05-roi-sheet-manuscript-5bbb7105.png) |
-| 6장. KB부동산 지수로 시장 흐름을 읽는 지도 대시보드 만들기 | [프롬프트](prompts/prompt_ch06_kb_dashboard.md) · [실행 안내](projects/chapter06_kb_dashboard/README.md) · [결과 화면](assets/screenshots/chapter06-kb-dashboard-manuscript-7ee1f591.png) |
-| 7장. 거래량 지도로 지역 대장 단지를 찾는 대시보드 만들기 | [프롬프트](prompts/prompt_ch07_trade_map.md) · [실행 안내](projects/chapter07_trade_map/README.md) · [결과 화면](assets/screenshots/chapter07-trade-map-manuscript-7640f4ce.png) |
-| 8장. 실거래가로 단지별 가격·갭을 비교하는 대시보드 만들기 | [프롬프트](prompts/prompt_ch08_price_gap.md) · [실행 안내](projects/chapter08_price_gap_table/README.md) · [결과 화면](assets/screenshots/chapter08-price-gap-manuscript-c0edde9e.png) |
-| 9장. 단지 가격·거래량 대시보드와 AI 투자 분석 보고서 만들기 | [프롬프트](prompts/prompt_ch09_price_volume.md) · [실행 안내](projects/chapter09_price_volume/README.md) · [결과 화면](assets/screenshots/chapter09-price-volume-manuscript-d68e488d.png) |
-
-화면은 책의 실습 사례이며 실시간 시장 현황이 아닙니다. [조회 조건과 출처](assets/screenshots/README.md)를 확인하세요.
-
-### 부록
-
-- 부록 1. 부동산 데이터를 제대로 읽는 시각화 기본 원칙
-- 부록 2. 책의 프롬프트를 바꾸어 나만의 대시보드 만들기
-- 부록 3. 세금까지 따져보는 매수와 매도
-- 부록 4. 실습에 다시 쓰는 참고 자료
-- 에필로그
+<a name="책의-목차"></a>
 
 ## 전체 목차
 
@@ -115,12 +88,16 @@ https://github.com/user-attachments/assets/b181e7bd-d273-4cd6-b6b0-26b564d1008c
 
 **4장. 관심단지 실거래가를 자동으로 추적하는 시트 만들기**
 
+[프롬프트](prompts/prompt_ch04_tracking.md) · [실행 안내](projects/chapter04_tracking/README.md) · [결과 화면](assets/screenshots/chapter04-tracking-sheet-manuscript-6a6cc039.png)
+
 - 4.1 관심단지 시세 추적을 자동화하는 이유
 - 4.2 관심단지 트래킹을 설계하는 프롬프트
 - 4.3 구글 시트를 연결하고 대화로 관심단지 관리하기
 - 4.4 전세가율과 전고점 대비로 매수 후보 좁히기
 
 **5장. 매수 시점별 아파트 수익률 계산기 만들기**
+
+[프롬프트](prompts/prompt_ch05_roi.md) · [실행 안내](projects/chapter05_roi/README.md) · [결과 화면](assets/screenshots/chapter05-roi-sheet-manuscript-5bbb7105.png)
 
 - 5.1 매수 시점별 수익률 비교와 계산 기준
 - 5.2 수익률 계산기를 설계하는 프롬프트
@@ -129,12 +106,16 @@ https://github.com/user-attachments/assets/b181e7bd-d273-4cd6-b6b0-26b564d1008c
 
 **6장. KB부동산 지수로 시장 흐름을 읽는 지도 대시보드 만들기**
 
+[프롬프트](prompts/prompt_ch06_kb_dashboard.md) · [실행 안내](projects/chapter06_kb_dashboard/README.md) · [결과 화면](assets/screenshots/chapter06-kb-dashboard-manuscript-7ee1f591.png)
+
 - 6.1 지도에서 읽는 지역 간 가격 확산
 - 6.2 KB부동산 대시보드를 설계하는 프롬프트
 - 6.3 KB부동산 대시보드를 실행하고 말로 고치기
 - 6.4 매매·전세·전세가율·거래량으로 읽는 시장 사이클
 
 **7장. 거래량 지도로 지역 대장 단지를 찾는 대시보드 만들기**
+
+[프롬프트](prompts/prompt_ch07_trade_map.md) · [실행 안내](projects/chapter07_trade_map/README.md) · [결과 화면](assets/screenshots/chapter07-trade-map-manuscript-7640f4ce.png)
 
 - 7.1 사람들의 실제 선택을 보여주는 지표
 - 7.2 거래량 지도 대시보드를 설계하는 프롬프트
@@ -144,6 +125,8 @@ https://github.com/user-attachments/assets/b181e7bd-d273-4cd6-b6b0-26b564d1008c
 
 **8장. 실거래가로 단지별 가격·갭을 비교하는 대시보드 만들기**
 
+[프롬프트](prompts/prompt_ch08_price_gap.md) · [실행 안내](projects/chapter08_price_gap_table/README.md) · [결과 화면](assets/screenshots/chapter08-price-gap-manuscript-c0edde9e.png)
+
 - 8.1 여러 단지를 같은 기준으로 비교하기
 - 8.2 가격·갭 대시보드를 설계하는 프롬프트
 - 8.3 단지 연결과 대표가격을 AI에게 검증받기
@@ -152,11 +135,15 @@ https://github.com/user-attachments/assets/b181e7bd-d273-4cd6-b6b0-26b564d1008c
 
 **9장. 단지 가격·거래량 대시보드와 AI 투자 분석 보고서 만들기**
 
+[프롬프트](prompts/prompt_ch09_price_volume.md) · [실행 안내](projects/chapter09_price_volume/README.md) · [결과 화면](assets/screenshots/chapter09-price-volume-manuscript-d68e488d.png)
+
 - 9.1 가격과 거래량을 함께 분석하는 이유
 - 9.2 가격·거래량 대시보드를 설계하는 프롬프트
 - 9.3 평형 계산·이상 거래 처리와 차트를 AI에게 검증받기
 - 9.4 가격·거래량 대시보드를 실행하고 말로 고치기
 - 9.5 단지 추세를 읽고 AI 투자 분석 보고서 만들기
+
+화면은 책의 실습 사례이며 실시간 시장 현황이 아닙니다. [조회 조건과 출처](assets/screenshots/README.md)를 확인하세요.
 
 ---
 
