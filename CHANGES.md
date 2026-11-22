@@ -17,7 +17,7 @@
 | 7장 | 가격·갭 비교 | 거래량 지도 | 코드·명령·프롬프트·결과 화면 연결 확인 |
 | 8장 | 거래량 지도 | 가격·갭 비교 | 코드·명령·프롬프트·9장 연결 참조 확인 |
 | 목차·앞부속 | 이전 장·절 제목과 부록 순서 | 개정본 목차와 앞부속 | 웹 미리보기에도 반영 |
-| 이전 요청 모음 | prompts/ 아래 26개 요청 파일 | legacy/prompts/ 아래 보존 | 요청 문안 변경 없음 |
+| 이전 요청 모음 | prompts/ 아래 26개 요청 파일 | [고정 커밋에 보존](https://github.com/foodie-repository/real-estate-investment-analysis-with-claude-code/blob/e801c93e20a3e7048cae2a7efcfa1d16378c076e/legacy/prompts/README.md) | 요청 문안 변경 없음 |
 | 기존 공개 코드 보완 | 수집 자료 보존, 지역 구분, 빈 DB 안내 등 | 기존 보완 유지 | 기존 회귀 테스트 통과 |
 
 ## 장 번호와 실행 경로
@@ -27,7 +27,7 @@
 - 대응 테스트도 거래량 지도는 `tests/part07/`, 가격·갭 비교는 `tests/part08/`로 맞췄습니다.
 - 이전 `partXX` 연결용 실행 파일은 새 장 경로를 사용하도록 갱신했습니다. 이름이 바뀐 이전 `chapter07_price_gap_table/`·`chapter08_trade_map/`에는 새 경로 안내를 남겼습니다.
 
-기존 폴더에서 직접 수정한 목록과 코드는 업데이트 전에 백업하세요. 이전 코드 전체가 필요하면 [이전 판본 안내](legacy/README.md)의 고정 버전을 사용합니다.
+기존 폴더에서 직접 수정한 목록과 코드는 업데이트 전에 백업하세요. 이전 코드 전체가 필요하면 [이전 판본 안내](https://github.com/foodie-repository/real-estate-investment-analysis-with-claude-code/blob/e801c93e20a3e7048cae2a7efcfa1d16378c076e/legacy/README.md)의 고정 버전을 사용합니다.
 
 ## 프롬프트와 코드의 관계
 

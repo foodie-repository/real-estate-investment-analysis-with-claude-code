@@ -41,4 +41,4 @@
 
 ## 이전 판본 자료
 
-이전 장 순서의 단계별 요청은 [이전 판본 자료](../legacy/README.md)에 보존했습니다. 현재 4~9장의 최초 구현에는 위 여섯 전문 파일을 사용합니다.
+이전 장 순서의 단계별 요청은 [이전 판본 자료](https://github.com/foodie-repository/real-estate-investment-analysis-with-claude-code/blob/e801c93e20a3e7048cae2a7efcfa1d16378c076e/legacy/README.md)에 보존했습니다. 현재 4~9장의 최초 구현에는 위 여섯 전문 파일을 사용합니다.

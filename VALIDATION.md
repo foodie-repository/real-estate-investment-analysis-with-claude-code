@@ -7,11 +7,11 @@
 - Python 문법 검사: `python -m compileall -q src projects tests main.py` 통과.
 - 실행 안내: `python main.py`에서 7장 거래량 지도, 8장 가격·갭 비교 및 현재 경로를 확인했습니다.
 - 4~9장 프롬프트 전문 6개와 PDF는 승인된 개정본 배포 원본과 바이트 단위로 대조했습니다. PDF는 1.0(2026-11-15) 버전을 유지합니다.
-- 기존 요청 파일 26개는 `legacy/prompts/`로 문안을 바꾸지 않고 보존했습니다.
+- 기존 요청 파일 26개는 [고정 커밋의 이전 요청 모음](https://github.com/foodie-repository/real-estate-investment-analysis-with-claude-code/blob/e801c93e20a3e7048cae2a7efcfa1d16378c076e/legacy/prompts/README.md)에 원문 그대로 있습니다.
 
 자동 테스트에는 합성 데이터와 Streamlit AppTest를 통한 자료 미준비 안내, 한 지역만 있는 KB 시계열, 지역별 수집 보존, 동명 단지 구분, 가격·갭과 가격·거래량 연결 조건 검사가 포함됩니다. 이는 전국 실거래 DB나 외부 서비스의 현재 응답을 검증한 결과는 아닙니다.
 
-실제 외부 API 호출, 구글 시트 기록, 전국·장기간 실제 DB 성능, 프롬프트의 AI 재실행, 노트북 전체 셀 실행, 책 전체 PDF·EPUB 제작은 이번 검증에 포함하지 않았습니다. 이전 검증 이력은 [이전 판본 기록](legacy/VALIDATION.md)에 보존합니다.
+실제 외부 API 호출, 구글 시트 기록, 전국·장기간 실제 DB 성능, 프롬프트의 AI 재실행, 노트북 전체 셀 실행, 책 전체 PDF·EPUB 제작은 이번 검증에 포함하지 않았습니다. 이전 검증 이력은 [이전 판본 기록](https://github.com/foodie-repository/real-estate-investment-analysis-with-claude-code/blob/e801c93e20a3e7048cae2a7efcfa1d16378c076e/legacy/VALIDATION.md)에 보존합니다.
 
 웹 미리보기는 보호된 Edge·Playwright로 PC 1440×1000, 모바일 390×844, 소형 화면 320×640에서 전체 구간의 페이지 이동·이미지 로딩·글자 크기 조절·화면 경계를 확인했습니다. PC·모바일 캡처를 직접 열어 확인했습니다. 결과 화면 6개는 현재 개정본 이미지와 해시가 일치합니다.
 
